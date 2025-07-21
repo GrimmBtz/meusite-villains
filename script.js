@@ -35,8 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let pontosCallisto = 0;
 
     // Pega os elementos do DOM
-    const botaoAceitar = document.getElementById("botaoAceitar");
+    const botaoirritada = document.getElementById("botaoirritada");
     const botaoFugir = document.getElementById("botaoFugir");
+    const botaoAceitar = document.getElementById("botaoAceitar");
     const respostaEscolha = document.getElementById("respostaEscolha");
     const pontosCallistoDisplay = document.getElementById("pontosCallisto");
 
@@ -53,13 +54,19 @@ document.addEventListener("DOMContentLoaded", function() {
     // Eventos dos botões
     botaoAceitar.addEventListener("click", function() {
         pontosCallisto += 10;
-        mostrarMensagem("Você aceita o presente com um sorriso... mas sente uma pontada no coração. Era envenenado? Talvez não.Talvez seja só... amor?");
+        mostrarMensagem("'Você chama isso de comida...? Não brinque comigo!! isso são só restos! que nojo' Penélope continua comendo mesmo assim, no mesmo momento entra o Renold(Irmão do meio de Penélope) Renold Pegunta se está tudo bem, quando percebe a comida estragada, reprendendo a empregada 'como se atreva a zombar dela dessa forma?' a punindo logo após");
+        atualizarPontos();
+    });
+
+    botaoirritada.addEventListener("click", function() {
+        pontosCallisto += 10;
+        mostrarMensagem("A empregada foi ate o Duque para conta sobre a sua birra. Seu irmão mais velho ouviu, te reprendeu  sua conduta é a proibindo até mesmo de beber água, morendo de fome nesta sala");
         atualizarPontos();
     });
 
     botaoFugir.addEventListener("click", function() {
         pontosCallisto -= 5;
-        mostrarMensagem("Você vira as costas e corre! Mas tropeça no seu vestido. Callisto ri... e a morte vem com um 'que pena, era só um broche");
+        mostrarMensagem("Quando você pega a comida é força a empregada comer, o seu irmão do meio passou no mesmo instante, e acabou vendo a cena. Equanto ele tenta te separar da empregada, ele te antigi com um garfo no pescoço, acabando morrendo ali mesma");
         atualizarPontos();
     });
 

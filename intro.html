@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Matrix da Penelope</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: black;
+      color: white;
+      font-family: monospace;
+      text-align: center;
+    }
+
+    #frase {
+      position: absolute;
+      top: 30px;
+      width: 100%;
+      font-size: 24px;
+      color: #f0c9e0;
+      text-shadow: 0 0 10px #fff;
+    }
+
+   #startBtn {
+  display: none;
+  margin-top: 20px;
+  font-size: 18px;
+  padding: 10px 20px;
+  background: #f7d5f5;
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  cursor: pointer;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none; /* Remove sublinhado */
+  text-align: center;
+}
+
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="matrix"></canvas>
+<div id="frase"></div>
+<a href="historia.html" id="startBtn">Entrar na História</a>
+<button id="startBtn" onclick="location.reload()">Reiniciar</button>
+
+
+<script>
+  const canvas = document.getElementById("matrix");
+  const ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const letras = "ABCDEFGHIJKLMNOPQRSTUVXY0123456789♡☆".split("");
+  const tamanhoLetra = 16;
+  const colunas = Math.floor(canvas.width / tamanhoLetra);
+  const gotas = Array(colunas).fill(0);
+
+  function desenharMatrix() {
+    // Fundo transparente para o efeito de arrasto
+    ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Cores em tons de Penelope Eckhart (rosas, lilases, brancos)
+    const cores = ["#f0c9e0", "#e0aee5", "#ffffff", "#f7d5f5"];
+    ctx.font = tamanhoLetra + "px monospace";
+
+    for (let i = 0; i < gotas.length; i++) {
+      const letra = letras[Math.floor(Math.random() * letras.length)];
+      const cor = cores[Math.floor(Math.random() * cores.length)];
+      ctx.fillStyle = cor;
+
+      ctx.fillText(letra, i * tamanhoLetra, gotas[i] * tamanhoLetra);
+
+      // Reinicia no topo aleatoriamente
+      if (gotas[i] * tamanhoLetra > canvas.height && Math.random() > 0.975) {
+        gotas[i] = 0;
+      }
+
+      gotas[i]++;
+    }
+  }
+
+  setInterval(desenharMatrix, 50);
+
+  // Frases de introdução
+  const frases = [
+    "Você acordou... mas este mundo não é o seu.",
+    "Sua alma habita o corpo de Penelope Eckhart.",
+    "Villains are destined to die... ou não?"
+  ];
+  
+
+  let index = 0;
+  const fraseEl = document.getElementById("frase");
+  const botao = document.getElementById("startBtn");
+
+  function mostrarFrase() {
+    if (index < frases.length) {
+      fraseEl.textContent = frases[index];
+      index++;
+      setTimeout(mostrarFrase, 3000);
+    } else {
+      botao.style.display = "inline-block";
+    }
+  }
+
+  window.onload = mostrarFrase;
+</script>
+</body>
+</html>
