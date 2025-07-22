@@ -137,3 +137,34 @@ footer .btn {
 .opcao:hover {
     background-color: #c71585;
 }
+.principe {
+  background: linear-gradient(to right, #000000, #FFD700);
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border: 2px solid #FFD700;
+  border-radius: 10px;
+}
+.ickles {
+  background-color: #4B0082;
+  color: #EEE;
+  padding: 10px;
+  border: 2px solid #8f33eb;
+  box-shadow: 0 0 20px #2b0055;
+  border-radius: 10px;
+}
+.reynold {
+  background-color: #4169E1;
+  color: white;
+  border: 2px solid #0f25ee;
+  padding: 10px;
+  border-radius: 8px;
+}
+.derick {
+  color: #FF0000;
+  font-weight: bold;
+  border-left: 4px solid #FF0000;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #ffe6e6;
+}
