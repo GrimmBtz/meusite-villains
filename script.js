@@ -1,5 +1,5 @@
 // Animação simples na página inicial
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const introText = document.querySelector(".intro p");
     introText.style.opacity = 0;
     setTimeout(() => {
@@ -23,7 +23,7 @@ let pontosAfeicao = {
     reynald: 0
 };
 // Animação simples na página inicial
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const introText = document.querySelector(".intro p");
     introText.style.opacity = 0;
     setTimeout(() => {
@@ -52,19 +52,20 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Eventos dos botões
-    botaoAceitar.addEventListener("click", function() {
-        pontosCallisto += 10;
-        mostrarMensagem("'Você chama isso de comida...? Não brinque comigo!! isso são só restos! que nojo' Penélope continua comendo mesmo assim, no mesmo momento entra o Renold(Irmão do meio de Penélope) Renold Pegunta se está tudo bem, quando percebe a comida estragada, reprendendo a empregada 'como se atreva a zombar dela dessa forma?' a punindo logo após");
-        atualizarPontos();
+    document.getElementById("botaoAceitar").addEventListener("click", () => {
+        mostrarMensagem("'Você chama isso de comida...? Não brinque comigo!! isso são só restos! que nojo' Penélope continua comendo mesmo assim, no mesmo momento entra o Renold (irmão do meio de Penélope). Renold pergunta se está tudo bem, quando percebe a comida estragada, reprendendo a empregada 'como se atreva a zombar dela dessa forma?' a punindo logo após.");
+        setTimeout(() => {
+            window.location.href = "cap2.html";
+        }, 12000);
     });
 
-    botaoirritada.addEventListener("click", function() {
+    botaoirritada.addEventListener("click", function () {
         pontosCallisto += 10;
         mostrarMensagem("A empregada foi ate o Duque para conta sobre a sua birra. Seu irmão mais velho ouviu, te reprendeu  sua conduta é a proibindo até mesmo de beber água, morendo de fome nesta sala");
         atualizarPontos();
     });
 
-    botaoFugir.addEventListener("click", function() {
+    botaoFugir.addEventListener("click", function () {
         pontosCallisto -= 5;
         mostrarMensagem("Quando você pega a comida é força a empregada comer, o seu irmão do meio passou no mesmo instante, e acabou vendo a cena. Equanto ele tenta te separar da empregada, ele te antigi com um garfo no pescoço, acabando morrendo ali mesma");
         atualizarPontos();
@@ -73,12 +74,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // Atualiza os pontos inicialmente
     atualizarPontos();
 });
-botaoAceitar.addEventListener("click", function() {
+botaoAceitar.addEventListener("click", function () {
     botaoAceitar.style.backgroundColor = "#90ee90"; // verde claro
     botaoFugir.style.backgroundColor = "";
     // Resto do código
 });
-botaoFugir.addEventListener("click", function() {
+botaoFugir.addEventListener("click", function () {
     botaoFugir.style.backgroundColor = "#ec2d2dff"; // vermelho claro
     botaoAceitar.style.backgroundColor = "";
     // Resto do código

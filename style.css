@@ -69,7 +69,7 @@ footer .btn {
     display: inline-block;
 }
 
-.historia-texto{
+.historia-texto {
     font-family: 'Georgia', serif;
     font-size: 18px;
     background-color: rgba(0, 0, 0, 0.05);
@@ -83,6 +83,7 @@ footer .btn {
     margin-bottom: 10px;
     line-height: 1.6;
 }
+
 .novel {
     margin-top: 40px;
     padding: 20px;
@@ -118,12 +119,14 @@ footer .btn {
     font-style: italic;
     color: #444;
 }
-.textoInicial{
+
+.textoInicial {
     color: #121212;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 .opcao {
-  margin: 5px;
+    margin: 5px;
     padding: 10px 20px;
     background-color: #fdf0f5;
     border: 2px solid #db7093;
@@ -137,34 +140,95 @@ footer .btn {
 .opcao:hover {
     background-color: #c71585;
 }
+
 .principe {
-  background: linear-gradient(to right, #000000, #FFD700);
-  color: white;
-  padding: 10px;
-  font-weight: bold;
-  border: 2px solid #FFD700;
-  border-radius: 10px;
+    background: linear-gradient(to right, #000000, #FFD700);
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
+
+.principe:hover {
+    background: linear-gradient(to right, #0c0b0c, #FFD700);
+    transform: scale(1.05);
+}
+
 .ickles {
-  background-color: #4B0082;
-  color: #EEE;
-  padding: 10px;
-  border: 2px solid #8f33eb;
-  box-shadow: 0 0 20px #2b0055;
-  border-radius: 10px;
+    background-color: #4B0082;
+    color: #EEE;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #8f33eb;
+    box-shadow: 0 0 20px #2b0055;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
+
+.ickles:hover {
+    background: linear-gradient(to right, #2b0055, #8f33eb);
+    transform: scale(1.05);
+}
+
 .reynold {
-  background-color: #4169E1;
-  color: white;
-  border: 2px solid #0f25ee;
-  padding: 10px;
-  border-radius: 8px;
+    background-color: #4169E1;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #0f25ee;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
+
+.reynold:hover {
+    background: linear-gradient(to right, #5676d6, #021bfd);
+    transform: scale(1.05);
+}
+
 .derick {
-  color: #FF0000;
-  font-weight: bold;
-  border-left: 4px solid #FF0000;
-  padding: 10px;
-  border-radius: 8px;
-  background-color: #ffe6e6;
+    color: #FF0000;
+    font-weight: bold;
+    border-left: 4px solid #FF0000;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #ffe6e6;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.derick:hover {
+    background: linear-gradient(to right, #ffd6e4, #f50404);
+    transform: scale(1.05);
+}
+
+.vinter {
+    background: linear-gradient(to right, #e6f0ff, #b3d1ff);
+    /* azul claro suave */
+    color: #1a1a1a;
+    /* quase preto, mas suave */
+    padding: 10px;
+    font-weight: bold;
+    border: 2px solid #99ccff;
+    /* azul gelo */
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(153, 204, 255, 0.5);
+    /* brilho azulado */
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.vinter:hover {
+    background: linear-gradient(to right, #d6eaff, #a3c9ff);
+    transform: scale(1.05);
 }
