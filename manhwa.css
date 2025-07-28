@@ -1,0 +1,97 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte refinada */
+body {
+    background-color: #fdf7f2;
+    color: #3a2e2e;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(to right, #e7c6ff, #fff0f5);
+    padding: 30px;
+    border-bottom: 3px solid #d9a5ff;
+    box-shadow: 0 5px 10px rgba(218, 112, 214, 0.3);
+}
+
+h1 {
+    font-size: 2.8em;
+    color: #6a0dad;
+    text-shadow: 1px 1px #f3e5f5;
+}
+
+/* Seções */
+.intro {
+    margin-top: 60px;
+    padding: 20px;
+    background: #fff5fa;
+    border: 2px solid #eec2e2;
+    border-radius: 12px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.3);
+}
+
+/* Botões */
+.btn {
+    background: linear-gradient(to right, #d8a7ff, #f2a7d4);
+    padding: 12px 25px;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 10px;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #b372f0, #e76baf);
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    margin-top: 60px;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #6b4c57;
+    background-color: #fceaff;
+    border-top: 2px solid #dca0e2;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Painéis tipo "caixa de diálogo manhwa" */
+.caixa-dialogo {
+    background: #fff0f9;
+    border: 2px solid #e4a1d0;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 30px auto;
+    width: 85%;
+    max-width: 800px;
+    font-family: 'Georgia', serif;
+    line-height: 1.7;
+    color: #4d2c4f;
+    box-shadow: 0 0 10px rgba(200, 150, 230, 0.2);
+}
+
+.caixa-dialogo strong {
+    color: #a52a2a;
+    font-weight: bold;
+}
+
+.caixa-dialogo em {
+    color: #9055ff;
+    font-style: italic;
+}
