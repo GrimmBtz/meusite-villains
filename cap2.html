@@ -2,51 +2,61 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Festival Proibido</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rota do Vinter</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
-<header>
-    <h1>Festa Do Segundo Príncipe Herdeiro</h1>
 
+<header>
+    <h1>Rota do Vinter</h1>
+    <p>O convite pela janela</p>
 </header>
 
 <body>
-    <section class="capitulo2">
-        <h2>Capítulo 2: A Festa</h2>
-        <p>
-            O salão está um alvoroço. Você observa o príncipe herdeiro chegando coberto de sangue - o silêncio domina
-            enquanto ele entrega um servo amedrontado ao castigo.
-            logo após o incidente, ele se retira calmamente ao jardim, como se nada tivesse acontecido...
-            Callisto. Que tinha um má relação com o seu irmão, O SEGUNDO PRINCIPE, abandonou o salão do banquete com
-            DESGOSTO por um pequeno acidente
-        </p>
-        <p><strong>Escolha o que fazer:</strong></p>
-        <button class="novel" id="arFesco">Tomar um pouco de ar fresco No Jardim</button>
-        <button class="novel" id="ficarFesta">Permanecer na festa</button>
+    <section id="inicioVinter" class="historia-texto">
+        <h2>O chamado do Coelho Branco</h2>
+        <p>Nos dias seguintes ao labirinto, você ainda sente a dor e o peso do lenço mágico no pescoço.</p>
+        <p>Em uma manhã silenciosa, um pequeno coelho branco aparece flutuando do lado de fora da sua janela, segurando um bilhete mágico.</p>
+        <button id="verJanela" class="novel">Olhar pela janela</button>
     </section>
 
-    <section id="Callisto" style="display: none;">
-        <h3>Afeição Callisto Regulos:</h3>
-        <p id="pontosCallisto"></p>
+    <section id="mensagemCoelho" style="display:none" class="historia-texto">
+        <p><em>O coelho branco pisca para você e estala com os dedos, mostrando uma mensagem:</em></p>
+        <p><strong>Bilhete:</strong> "Se está procurando respostas, venha me encontrar. Já viu a verdade."</p>
+        <p><strong>— V.</strong></p>
+        <p>Seu coração dispara. O cavaleiro do lenço está te chamando.</p>
+        <button id="seguirCoelho" class="novel">Seguir o coelho</button>
+        <button id="ignorarCoelho" class="novel">Ignorar e fechar a janela</button>
     </section>
 
-    <section id="fugaNortunar" style="display: none;">
-        <p id="mensagemCena" class="caixa-dialogo"></p>
+    <section id="esconderijoGuilda" style="display:none" class="historia-texto">
+        <h3>Esconderijo Secreto da Guilda Coelho Branco</h3>
+        <p>Você decide seguir o coelho, que te leva até um local escondido cheio de artefatos antigos e livros mágicos.</p>
+        <p><strong>Vinter:</strong> "Sabia que você viria. Quer sobreviver? Então preste atenção."</p>
+        <p>Ele te observa com olhar sério e misterioso.</p>
     </section>
 
-    <section id="opcoesJardim" style="display: none;">
-        <p><strong>O que Penelope deve responder?</strong></p>
-        <button  class="novel" id="respostaEducada">Não foi minha inteção, Alteza...</button>
-        <button class="novel" id="respostaCalada">"Ficar em Silêncio"</button>
-        <button class="novel" id="respostaProvocacao">EU... EU-EU, EU GOSTO DE VOCÊ!</button>
+    <section id="rotaFechada" style="display:none" class="historia-texto">
+        <p><strong>Você fecha a janela.</strong></p>
+        <p>O coelho desaparece como poeira mágica, e o lenço no seu pescoço permanece silencioso.</p>
+        <p><em>Rota do Vinter encerrada.</em></p>
     </section>
 
-</body>
-   <footer>
+    <section id="mensagemCena" class="caixa-dialogo"></section>
+
+    <section id="opcoesVinter" style="display:none" class="historia-texto">
+        <p><strong>Como Penelope reage ao lenço mágico?</strong></p>
+        <button id="vinterAceitar" class="novel">Aceitar o pano mágico</button>
+        <button id="vinterPerguntar" class="novel">Perguntar sobre o pano</button>
+        <button id="vinterIgnorar" class="novel">Seguir sem aceitar</button>
+    </section>
+
+    <footer>
         <a href="historia.html" class="btn">Voltar</a>
     </footer>
-<script src="cap2.js"></script>
+
+    <script src="vinter.js"></script>
+</body>
 
 </html>

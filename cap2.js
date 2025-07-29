@@ -17,6 +17,7 @@ botaoarFesco.addEventListener("click", () => {
     atualizarPontos();
     document.getElementById("fugaNortunar").style.display = "block";
     document.getElementById("opcoesJardim").style.display = "block";
+    document.getElementById("Callisto").style.display = "block";
 });
 
 botaoarficarFesta.addEventListener("click", () => {
@@ -24,26 +25,6 @@ botaoarficarFesta.addEventListener("click", () => {
     mostrarMensagem("<p>Você permanece na festa, tentando se manter invisível. Nada acontece... Mas você sente que perdeu algo importante.</p>");
     atualizarPontos();
     document.getElementById("fugaNortunar").style.display = "block";
-});
-
-document.getElementById("respostaCalada").addEventListener("click", () => {
-    mostrarMensagem(`
-        <p><strong>Penelope</strong> permanece em silêncio, os olhos firmes nos dele.</p>
-        <p>O silêncio entre vocês pesa. Callisto se aproxima lentamente, curioso.</p>
-        <p><strong>Callisto:</strong> <em>"Interessante... Não vai gritar? Hahaha."</em></p>
-    `);
-    pontosCallisto += 5;
-    atualizarPontos();
-});
-
-document.getElementById("respostaProvocacao").addEventListener("click", () => {
-    mostrarMensagem(`
-        <p><strong>Penelope:</strong> <em>"EU... EU-EU, EU GOSTO DE VOCÊ!"</em></p>
-        <p>Callisto pisca, surpreso. Por um momento, o príncipe parece sem palavras.</p>
-        <p><strong>Callisto:</strong> <em>"Você é doida... Mas talvez eu goste disso."</em></p>
-    `);
-    pontosCallisto += 15;
-    atualizarPontos();
 });
 
 document.getElementById("respostaEducada").addEventListener("click", () => {
@@ -69,7 +50,6 @@ document.getElementById("respostaCalada").addEventListener("click", () => {
     `);
     atualizarPontos();
     document.getElementById("opcoesJardim").style.display = "none";
-    // Aqui você pode desabilitar botões para impedir outras escolhas
 });
 
 document.getElementById("respostaProvocacao").addEventListener("click", () => {
@@ -83,4 +63,48 @@ document.getElementById("respostaProvocacao").addEventListener("click", () => {
     `);
     atualizarPontos();
     document.getElementById("opcoesJardim").style.display = "none";
+
+    // Aqui chamamos a função correta
+    mostrarCenaVinter();
+});
+
+function mostrarCenaVinter() {
+    document.getElementById("encontroVinter").style.display = "block";
+    document.getElementById("textoVinter").innerHTML = `
+        <p><em>Você avança pelo labirinto, a dor lateja como lembrança constante.</em></p>
+        <p>De repente, uma figura surge entre a névoa branca.</p>
+        <p><strong>Vinter:</strong> "Isso parece pior do que posso tratar sem ajuda, vou chamar os médicos para você."</p>
+        <p><strong>Penelope:</strong> "Não precisa de médico."</p>
+        <p><em>Vinter: "Então aceite esse lenço mágico pelo menos."</em></p>
+        <p><em>Ele estende um pano fino, levemente luminoso.</em></p>
+        <p><strong>Vinter:</strong> "Use isso. Cura rápida, mas só se você não questionar demais."</p>
+    `;
+    document.getElementById("opcoesJardim").style.display = "none";
+}
+
+document.getElementById("vinterAceitar").addEventListener("click", () => {
+    mostrarMensagem(`
+        <p><strong>Penelope:</strong> <em>*aceita o pano e o enrola no pescoço*</em></p>
+        <p><em>A dor cede lentamente. O pano parece pulsar com vida.</em></p>
+        <p><strong>Vinter:</strong> "Então escolha viver."</p>
+    `);
+    document.getElementById("encontroVinter").style.display = "none";
+});
+
+document.getElementById("vinterPerguntar").addEventListener("click", () => {
+    mostrarMensagem(`
+        <p><strong>Penelope:</strong> "O que é este pano... mágica?"</p>
+        <p><strong>Vinter:</strong> "Algo muito antigo. Não é para todos."</p>
+        <p><em>Ele observa sua expressão, silencioso. Então se afasta, deixando o pano para trás.</em></p>
+    `);
+    document.getElementById("encontroVinter").style.display = "none";
+});
+
+document.getElementById("vinterIgnorar").addEventListener("click", () => {
+    mostrarMensagem(`
+        <p><em>Penelope balança a cabeça, tentando tomar impulso.</em></p>
+        <p><strong>Vinter:</strong> "Recuse sua salvação e aceite sua consequência."</p>
+        <p><em>Mesmo assim, ele coloca o pano sobre uma pedra próxima. Então desaparece.</em></p>
+    `);
+    document.getElementById("encontroVinter").style.display = "none";
 });

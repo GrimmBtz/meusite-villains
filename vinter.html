@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinter</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rota de Vinter - Encontro Misterioso</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<header>
-    x<h1>Rota do Vinter</h1>
-    <p>Encontro misterioso</p>
-</header>
-
 <body>
-    <section class="intro">
-        <div class="historia-texto">
-        <p>Você se perde no labirinto e encontra Cavaleiro. Ele oferece um lenço e brinca enigmaticamente.</p>    
-        </div>
-    </section>
+  <header>
+    <h1>Rota do Vinter</h1>
+    <p>Convite inesperado pela janela...</p>
+  </header>
 
+  <div id="pontosVinter" style="margin: 10px 0; font-weight: bold;">Afeição Vinter: 0</div>
+
+  <section id="inicioCena" class="historia-texto">
+    <p>Você recebe um convite misterioso para se encontrar com Vinter.</p>
+    <button id="aceitarConvite" class="novel">Aceitar o convite</button>
+    <button id="recusarConvite" class="novel">Ignorar</button>
+  </section>
+
+  <section id="esconderijoCena" class="historia-texto" style="display:none;">
+    <p>Você é teleportada para um esconderijo secreto. Crianças estão tentando abrir um baú congelado por magia.</p>
+    <button id="aproximarCriancas" class="novel">Aproximar-se das crianças</button>
+  </section>
+
+  <section id="vinterAparece" class="historia-texto" style="display:none;">
+    <p>Vinter aparece mascarado, olhando sério e ameaçador.</p>
+    <p><strong>Vinter:</strong> "Quem é você? O que está fazendo aqui?"</p>
+    <button id="responderApresentar" class="novel">Me apresentar</button>
+    <button id="responderSilencio" class="novel">Ficar em silêncio</button>
+    <button id="responderFugir" class="novel">Tentar fugir</button>
+  </section>
+
+  <div id="mensagemCena" class="caixa-dialogo"></div>
+
+  <footer>
+    <a href="historia.html" class="btn">Voltar</a>
+  </footer>
+
+  <script src="vinter.js"></script>
 </body>
-
 </html>
