@@ -12,6 +12,7 @@ const mostrarMensagem = (texto) => {
 const inicioCena = document.getElementById("inicioCena");
 const esconderijoCena = document.getElementById("esconderijoCena");
 const vinterAparece = document.getElementById("vinterAparece");
+const btnContinuarVinter = document.getElementById("btnContinuarVinter");
 
 const btnAceitarConvite = document.getElementById("aceitarConvite");
 const btnRecusarConvite = document.getElementById("recusarConvite");
@@ -47,6 +48,7 @@ btnResponderApresentar.addEventListener("click", () => {
     <p>Ele se afasta lentamente, ainda observando você com desconfiança.</p>
   `);
   vinterAparece.style.display = "none";
+  btnContinuarVinter.style.display = "block";
   // Aqui você pode adicionar próximo passo do roteiro
 });
 
