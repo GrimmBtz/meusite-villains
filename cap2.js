@@ -99,10 +99,11 @@ function mostrarCenaVinter() {
 // Opções de Vinter
 btnVinterAceitar.addEventListener("click", () => {
   mostrarMensagem(`
-    <p><strong>Penelope:</strong> *ceita o pano e o coloca no pescoço na ferida</p>
+    <p><strong>Penelope:</strong> Aceita o pano e o coloca no pescoço na ferida</p>
     <p><strong>Vinter:</strong> "Então escolha viver."</p>
   `);
   vinterCena.style.display = "none";
+   document.getElementById("continuar").style.display = "block";
 });
 
 btnVinterPerguntar.addEventListener("click", () => {

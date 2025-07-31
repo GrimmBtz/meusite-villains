@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Noturno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Festival Noturno</h1>
+    </header>
+<section class="caixa-dialogo" id="inicioFestival">
+    <h3 class="historia-texto">Fuga silenciosa</h3>
+    <p>Penélope planeja fugir sozinha à noite para ir ao Festival.</p>
+    <p>Ela tem algumas opções de saída:</p>
+    <button id="usuarcortina" class="novel">Fugir com uma corda de cortina pela janela</button>
+    <button id="buracomuro" class="novel">Fugir pelo buraco no muro do Jardim</button>
+    <button id="naofugir" class="novel">Evitar sair (medo do duque)</button>
+  </section>
+
+<!-- Segunda cena do cap, vai me ajudar a ver qual parte é a certo-->
+  <section class="caixa-dialogo" id="fugaJanela" style="display: none;">
+    <p>A corda feita com a cortina é curta demais. Penélope fica pendurada até que <span class="nomereynold">Reynold</span> aparece na janela logo abaixo.</p>
+    <p><span class="nomereynold"><strong>Reynold:</strong></span> <em>“Você tá brincando de princesa em apuros? Vai cair desse jeito. Pula, eu te pego!”</em></p>
+    <button id="pularReynold" class="novel">Pular e confiar em Reynold</button>
+    <button id="ficarcorda" class="novel">Ficar pendurada</button>
+  </section>
+
+ <!--Aqui vai ser a missão la do festival, até que isso é util-->
+ <section id="missaoFestival" style="display: none;" class="historia-texto">
+    <p><strong class="sistema">Sistema:</strong> Nova Missão: Ir ao Festival com <span class="nomereynold">Reynold</span>. Deseja aceitar?</p>
+    <button id="aceitarfestival" class="novel">Sim</button>
+    <button id="recusarfestival" class="novel">Não</button>
+  </section>
+ <!-- Quando o intrometido do derrick aparece-->
+  <section id="encontroDerrick" style="display: none;" class="historia-texto">
+    <p><span class="nomederick"><strong>Derick:</strong></span> Nova missão: Observar o festival com <span class="nomederick">Derick</span>. Deseja aceitar?</p>
+    <button id="aceitarDerick" class="novel">Sim, vou com esse cabeçudo</button>
+    <button id="recusarDerick" class="novel">Não</button>
+  </section>
+ <!-- Perde os irmãos -->
+    <section id="perdaIrmãos" style="display: none;" class="historia-texto">
+    <p>No meio da multidão, Penélope se separa dos irmãos.</p>
+    <p><strong class="sistema">Sistema:</strong> Missão: Encontrar <span class="ickles">Ickles</span>. Deseja aceitar?</p>
+    <button id="aceitarIckles" class="novel">Sim</button>
+    <button id="recusarIckles" class="novel">Não</button>
+  </section>
+
+<!--Voltando a 1500 aqui, comprando pessoas-->
+   <section id="mercadoEscravos" style="display: none;" class="historia-texto">
+    <p>Penélope vê <span class="ickles">Ickles</span> sendo leiloado entre gritos e lances.</p>
+    <p>Os valores disparam: 1 milhão... 5 milhões... 10 milhões de moedas de ouro.</p>
+    <p>O que você faz?</p>
+    <button id="cobrir10x" class="novel">Cobrir 10x o valor</button>
+    <button id="naoLance" class="novel">Não fazer lance</button>
+    <button id="cobrirPadrao" class="novel">Cobrir lance</button>
+    <button id="negociarMercador" class="novel">Negociar com mercador</button>
+  </section><br>
+ <section id="mensagemCentral" class="caixa-dialogo"></section>
+<footer>
+        <a href="cap2.html" class="btn">Voltar ao Capítulo 2</a>
+    </footer>
+</body>
+<script src="festival.js"></script>
+</html>

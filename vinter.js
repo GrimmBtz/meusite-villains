@@ -1,55 +1,63 @@
-let pontosVinter = 0;
+let afeicao = 0;
+const pontos = document.getElementById("pontosVinter");
 
-const atualizarPontos = () => {
-  document.getElementById("pontosVinter").innerText = "Afeição Vinter: " + pontosVinter;
+// Atualiza o valor da afeição na tela
+function atualizarAfeicao(valor) {
+  afeicao += valor;
+  pontos.innerText = "Afeição Vinter: " + afeicao;
 }
 
-const mostrarMensagem = (texto) => {
-  document.getElementById("mensagemCena").innerHTML = texto;
+// Esconde todas as seções com a classe historia-texto
+function esconderTodas() {
+  document.querySelectorAll("section.historia-texto").forEach(sec => sec.style.display = "none");
 }
 
-// Referências das seções e botões
-const inicioCena = document.getElementById("inicioCena");
-const esconderijoCena = document.getElementById("esconderijoCena");
-const vinterAparece = document.getElementById("vinterAparece");
-const btnContinuarVinter = document.getElementById("btnContinuarVinter");
-
-const btnAceitarConvite = document.getElementById("aceitarConvite");
-const btnRecusarConvite = document.getElementById("recusarConvite");
-const btnAproximarCriancas = document.getElementById("aproximarCriancas");
-const btnResponderApresentar = document.getElementById("responderApresentar");
-const btnResponderSilencio = document.getElementById("responderSilencio");
-const btnResponderFugir = document.getElementById("responderFugir");
-
-// Fluxo do jogo
-
-btnAceitarConvite.addEventListener("click", () => {
-  inicioCena.style.display = "none";
-  esconderijoCena.style.display = "block";
-  mostrarMensagem("Você sente uma energia estranha, e de repente é teleportada para um esconderijo secreto da Guilda Coelho Branco.");
+// Cena 1 botões
+document.getElementById("verEspelho").addEventListener("click", () => {
+  atualizarAfeicao(10);
+  esconderTodas();
+  document.getElementById("olharEspelho").style.display = "block";
 });
 
-btnRecusarConvite.addEventListener("click", () => {
-  mostrarMensagem("Você ignora o convite. Talvez seja melhor evitar problemas por enquanto...");
+document.getElementById("recusarVer").addEventListener("click", () => {
+  atualizarAfeicao(-5);
+  esconderTodas();
+  document.getElementById("recusarEspelho").style.display = "block";
 });
 
-btnAproximarCriancas.addEventListener("click", () => {
-  esconderijoCena.style.display = "none";
-  vinterAparece.style.display = "block";
-  mostrarMensagem("As crianças te olham assustadas, parando o que estavam fazendo. Você nota o baú congelado que estavam tentando abrir, coberto por uma aura mágica. De repente, Vinter aparece mascarado, encarando você com um olhar ameaçador.");
+// Cena 2 botão continuar
+document.getElementById("seguirDepoisOlhar").addEventListener("click", () => {
+  esconderTodas();
+  document.getElementById("posOlhar").style.display = "block";
 });
 
-btnResponderApresentar.addEventListener("click", () => {
-  pontosVinter += 2;
-  atualizarPontos();
-  mostrarMensagem(`
-    <p><strong>Penelope:</strong> "Eu sou Penelope. Vim porque recebi seu convite."</p>
-    <p><strong>Vinter:</strong> "Hm... Não esperava sua presença aqui tão cedo. Fique atenta. Nem tudo é o que parece."</p>
-    <p>Ele se afasta lentamente, ainda observando você com desconfiança.</p>
-  `);
-  vinterAparece.style.display = "none";
-  btnContinuarVinter.style.display = "block";
-  // Aqui você pode adicionar próximo passo do roteiro
+// Cena 3 botão continuar
+document.getElementById("seguirDepoisRecusar").addEventListener("click", () => {
+  esconderTodas();
+  document.getElementById("posRecusar").style.display = "block";
 });
 
-btnResponderSilencio.addEventL
+// Cena 4 botões
+document.getElementById("aceitarSantuário").addEventListener("click", () => {
+  atualizarAfeicao(20);
+  esconderTodas();
+  document.getElementById("fimAceito").style.display = "block";
+});
+
+document.getElementById("recusarSantuário").addEventListener("click", () => {
+  atualizarAfeicao(-10);
+  esconderTodas();
+  document.getElementById("fimRecusado").style.display = "block";
+});
+
+// Cena 5 botões
+document.getElementById("tentarNovamente").addEventListener("click", () => {
+  atualizarAfeicao(5);
+  esconderTodas();
+  document.getElementById("olharEspelho").style.display = "block";
+});
+
+document.getElementById("fugirSantuário").addEventListener("click", () => {
+  esconderTodas();
+  document.getElementById("fimFugir").style.display = "block";
+});

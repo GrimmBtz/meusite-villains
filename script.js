@@ -53,10 +53,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Eventos dos botões
     document.getElementById("botaoAceitar").addEventListener("click", () => {
-        mostrarMensagem("'Você chama isso de comida...? Não brinque comigo!! isso são só restos! que nojo' Penélope continua comendo mesmo assim, no mesmo momento entra o Renold (irmão do meio de Penélope). Renold pergunta se está tudo bem, quando percebe a comida estragada, reprendendo a empregada 'como se atreva a zombar dela dessa forma?' a punindo logo após.");
+        mostrarMensagem("'Você chama isso de comida...? Não brinque comigo!! isso são só restos! que nojo' Penélope continua comendo mesmo assim, no mesmo momento entra o Renold (irmão do meio de Penélope). Renold pergunta se está tudo bem, quando percebe a comida estragada, reprendendo a empregada 'como se atreva a zombar dela dessa forma?' a punindo logo após. <strong>ESPERA UM POUCO, VAMOS TE MANDAR PARA PROXIMA PAGINA</strong>");
         setTimeout(() => {
             window.location.href = "cap2.html";
-        }, 12000);
+        }, 15000);
     });
 
     botaoirritada.addEventListener("click", function () {
