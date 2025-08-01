@@ -1,63 +1,48 @@
-let afeicao = 0;
-const pontos = document.getElementById("pontosVinter");
+// Função para mostrar mensagens finais
+const mostrarMensagem = (mensagem) => {
+  const caixa = document.getElementById("finalRotaVinter");
+  caixa.innerHTML = mensagem;
+  caixa.style.display = "block";
+};
 
-// Atualiza o valor da afeição na tela
-function atualizarAfeicao(valor) {
-  afeicao += valor;
-  pontos.innerText = "Afeição Vinter: " + afeicao;
+// Convite do Coelho
+document.getElementById("aceitarConviteVinter").addEventListener("click", () => {
+  document.getElementById("inicioVinter").style.display = "none";
+  document.getElementById("chegadaClube").style.display = "block";
+});
+
+document.getElementById("ignorarConviteVinter").addEventListener("click", () => {
+  mostrarMensagem("<p>Você ignora o coelho. Mas à meia-noite, a janela explode em magia. Alguém não gostou da sua recusa.</p><p><strong>Fim Prematuro.</strong></p>");
+  document.getElementById("inicioVinter").style.display = "none";
+});
+
+// Chegada ao Clube
+document.getElementById("responderMisteriosa").addEventListener("click", () => {
+  document.getElementById("chegadaClube").style.display = "none";
+  document.getElementById("interacaoVinter").style.display = "block";
+});
+
+document.getElementById("fugirClube").addEventListener("click", () => {
+  mostrarMensagem("<p>Você tenta fugir... mas Vinter fecha a sala com gelo. <em>“Agora você me deve explicações.”</em></p>");
+  document.getElementById("chegadaClube").style.display = "none";
+});
+
+// Interação com Vinter
+document.getElementById("revelarIdentidade").addEventListener("click", () => {
+  mostrarMensagem("<p>Você retira a máscara. Vinter arregala os olhos: <em>“Penelope Eckhart... por que está aqui?”</em></p><p>Mesmo surpreso, ele parece aliviado.</p><p><strong>Afeição +10</strong></p>");
+  document.getElementById("interacaoVinter").style.display = "none";
+  atualizarPontos(10);
+});
+
+document.getElementById("manterSegredo").addEventListener("click", () => {
+  mostrarMensagem("<p>Você recusa mostrar quem é. <em>“Talvez um dia descubra...”</em></p><p>Vinter ri de leve. <strong>“Aparentemente, gosto de enigmas.”</strong></p><p><strong>Afeição +5</strong></p>");
+  document.getElementById("interacaoVinter").style.display = "none";
+  atualizarPontos(5);
+});
+
+// Pontuação de afeição
+let afeicaoVinter = 0;
+function atualizarPontos(valor) {
+  afeicaoVinter += valor;
+  document.getElementById("pontosVinter").textContent = `Afeição Vinter: ${afeicaoVinter}`;
 }
-
-// Esconde todas as seções com a classe historia-texto
-function esconderTodas() {
-  document.querySelectorAll("section.historia-texto").forEach(sec => sec.style.display = "none");
-}
-
-// Cena 1 botões
-document.getElementById("verEspelho").addEventListener("click", () => {
-  atualizarAfeicao(10);
-  esconderTodas();
-  document.getElementById("olharEspelho").style.display = "block";
-});
-
-document.getElementById("recusarVer").addEventListener("click", () => {
-  atualizarAfeicao(-5);
-  esconderTodas();
-  document.getElementById("recusarEspelho").style.display = "block";
-});
-
-// Cena 2 botão continuar
-document.getElementById("seguirDepoisOlhar").addEventListener("click", () => {
-  esconderTodas();
-  document.getElementById("posOlhar").style.display = "block";
-});
-
-// Cena 3 botão continuar
-document.getElementById("seguirDepoisRecusar").addEventListener("click", () => {
-  esconderTodas();
-  document.getElementById("posRecusar").style.display = "block";
-});
-
-// Cena 4 botões
-document.getElementById("aceitarSantuário").addEventListener("click", () => {
-  atualizarAfeicao(20);
-  esconderTodas();
-  document.getElementById("fimAceito").style.display = "block";
-});
-
-document.getElementById("recusarSantuário").addEventListener("click", () => {
-  atualizarAfeicao(-10);
-  esconderTodas();
-  document.getElementById("fimRecusado").style.display = "block";
-});
-
-// Cena 5 botões
-document.getElementById("tentarNovamente").addEventListener("click", () => {
-  atualizarAfeicao(5);
-  esconderTodas();
-  document.getElementById("olharEspelho").style.display = "block";
-});
-
-document.getElementById("fugirSantuário").addEventListener("click", () => {
-  esconderTodas();
-  document.getElementById("fimFugir").style.display = "block";
-});

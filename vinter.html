@@ -7,71 +7,39 @@
 </head>
 <body>
   <header>
-    <h1>Rota de Vinter — Santuário de Neve</h1>
-    <p class="subtitulo">Um lugar onde o tempo congela e a verdade é enterrada sob o silêncio</p>
+    <h1>Rota de Vinter — O Convite do Coelho Branco</h1>
   </header>
 
   <div id="pontosVinter">Afeição Vinter: 0</div>
 
-  <!-- Cena 1 -->
-  <section id="inicioContinua" class="historia-texto">
-    <p>O silêncio do santuário é absoluto. Neve cai mesmo sem céu, e o ar parece congelar suas emoções.</p>
-    <p><strong>Vinter:</strong> "Este espelho... ele reflete a maldição de quem desafia o sistema."</p>
-    <p>Você sente um arrepio. O espelho pulsa com magia proibida.</p>
-    <button id="verEspelho" class="novel">Olhar para o espelho</button>
-    <button id="recusarVer" class="novel">Desviar o olhar</button>
+  <!-- Rota do Vinter - Início -->
+  <section id="inicioVinter" class="caixa-dialogo">
+    <h3 class="historia-texto">Um convite incomum</h3>
+    <p>Durante a noite, um lenço mágico voa até sua janela... e se transforma em um coelho que fala:</p>
+    <p><em>"Penelope Eckhart. A Guilda do Coelho Branco aguarda sua presença."</em></p>
+    <button id="aceitarConviteVinter" class="novel">Seguir o coelho</button>
+    <button id="ignorarConviteVinter" class="novel">Ignorar (parece uma armadilha)</button>
   </section>
 
-  <!-- Cena 2 - olhar espelho -->
-  <section id="olharEspelho" class="historia-texto" style="display:none;">
-    <p>Você encara o espelho. A superfície reflete não seu rosto, mas sua dor oculta.</p>
-    <p><strong>Vinter:</strong> "Você viu... mesmo assim ficou. Isso é perigoso."</p>
-    <p>Seu silêncio é resposta suficiente. Por um breve instante, a neve parece hesitar.</p>
-    <button id="seguirDepoisOlhar" class="novel">Continuar</button>
+  <section id="chegadaClube" class="caixa-dialogo" style="display: none;">
+    <p>Você entra no clube escondida sob uma máscara mágica. Um homem com uma máscara de coelho te encara.</p>
+    <p><strong>Vinter:</strong> <em>“Você... quem é você? Como entrou aqui?”</em></p>
+    <button id="responderMisteriosa" class="novel">Responder de forma misteriosa</button>
+    <button id="fugirClube" class="novel">Tentar fugir sem ser notada</button>
   </section>
 
-  <!-- Cena 3 - recusar olhar -->
-  <section id="recusarEspelho" class="historia-texto" style="display:none;">
-    <p>Você vira o rosto. O espelho permanece imóvel, mas a magia que emana dele parece decepcionada.</p>
-    <p><strong>Vinter:</strong> "Entendo. Ninguém quer carregar o fardo dos meus pecados."</p>
-    <p>Mesmo assim, ele não te afasta. Mas o frio ao redor parece mais cruel agora.</p>
-    <button id="seguirDepoisRecusar" class="novel">Continuar</button>
+  <section id="interacaoVinter" class="caixa-dialogo" style="display: none;">
+    <p>Vinter observa cada movimento seu, intrigado. As crianças do clube correm ao seu redor tentando te proteger.</p>
+    <p><strong>Vinter:</strong> <em>“Você me lembra alguém... mas não posso ver através da sua máscara.”</em></p>
+    <button id="revelarIdentidade" class="novel">Revelar quem é</button>
+    <button id="manterSegredo" class="novel">Manter o disfarce</button>
   </section>
 
-  <!-- Cena 4 - próxima após olhar espelho -->
-  <section id="posOlhar" class="historia-texto" style="display:none;">
-    <p>A neve começa a se acumular em torno de vocês, enquanto Vinter se aproxima com olhos profundos.</p>
-    <p><strong>Vinter:</strong> "Diga-me, está pronta para aceitar o que o santuário exige?"</p>
-    <button id="aceitarSantuário" class="novel">Aceitar o desafio</button>
-    <button id="recusarSantuário" class="novel">Recusar e recuar</button>
-  </section>
-
-  <!-- Cena 5 - próxima após recusar olhar -->
-  <section id="posRecusar" class="historia-texto" style="display:none;">
-    <p>Vinter suspira, as sombras ao redor parecem se fechar um pouco mais.</p>
-    <p><strong>Vinter:</strong> "A escolha é sua, mas o silêncio nunca perdoa os fracos."</p>
-    <button id="tentarNovamente" class="novel">Tentar olhar o espelho</button>
-    <button id="fugirSantuário" class="novel">Fugir do santuário</button>
-  </section>
-
-  <!-- Mensagens finais -->
-  <section id="fimAceito" class="historia-texto" style="display:none;">
-    <p>Você aceita o desafio. O ar congela por um instante, mas uma faísca de poder desperta dentro de você.</p>
-    <p><strong>Vinter:</strong> "Então venha, o caminho será difícil, mas sua vontade é sua lâmpada."</p>
-  </section>
-
-  <section id="fimRecusado" class="historia-texto" style="display:none;">
-    <p>Você recua e decide fugir. O santuário fecha suas portas em silêncio, e o frio te persegue.</p>
-    <p><strong>Vinter:</strong> "Corajoso ou covarde? O tempo revelará."</p>
-  </section>
-
-  <section id="fimFugir" class="historia-texto" style="display:none;">
-    <p>Você foge desesperadamente, mas o frio gélido te alcança e tudo fica branco ao seu redor.</p>
-    <p><strong>Sistema:</strong> "GAME OVER - Você foi consumido pelo silêncio do santuário."</p>
-  </section>
+  <!-- Caixa de mensagem final -->
+  <section id="finalRotaVinter" class="caixa-dialogo" style="display: none;"></section>
 
   <footer>
-    <a href="vinter.html" class="btn">Voltar</a>
+    <a href="rotainicio.html" class="btn">Voltar a rota de escolha</a>
   </footer>
 
   <script src="vinter.js"></script>
