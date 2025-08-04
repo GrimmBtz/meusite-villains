@@ -10,7 +10,7 @@ function atualizarPontos() {
 atualizarPontos();
 
 document.getElementById("aceitarBebida").addEventListener("click", () => {
-    pontosCallisto += 5;
+    pontosCallisto += 1;
     localStorage.setItem("callistoPontos", pontosCallisto);
     respostaEscolha.innerText = "Você aceita e sorri... mas sente seu coração acelerar. Amor ou veneno?";
     atualizarPontos();

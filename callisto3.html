@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rota de Callisto - Floresta</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header>
+    <h1>Callisto Regulus - Encontro na Floresta</h1>
+    <p>Após o encontro na festa do segundo príncipe herdeiro, você o reencontra durante o evento de caça.</p>
+  </header>
+
+  <!-- Cena Inicial -->
+  <section class="caixa-dialogo" id="inicioFloresta">
+    <p>Criaturas mágicas explodem ao seu redor. Seus irmãos desapareceram, deixando você sozinha. Quando tudo parece perdido, uma espada dourada corta o ar. <strong>Callisto Regulus</strong> surge diante de você, matando os monstros com precisão fria.</p>
+    <p><strong>Callisto:</strong> “Isso são guardiões, Eckhart? Que piada...”</p>
+    <button id="resposta1" class="novel">“Eu não pedi para ser salva.”</button>
+    <button id="resposta2" class="novel">“Você... me salvou?”</button>
+    <button id="resposta3" class="novel">(Ficar em silêncio)</button>
+  </section>
+
+  <!-- Resposta da primeira escolha -->
+  <section class="caixa-dialogo" id="respostaCena" style="display: none;">
+    <div id="respostaTexto"></div>
+    <p id="pontosCallisto">Afeição Callisto: 0</p>
+    <button id="continuarConfronto" class="novel">Continuar</button>
+  </section>
+
+  <!-- Segunda cena: confronto com os irmãos -->
+  <section class="caixa-dialogo" id="callistoConfronto" style="display: none;">
+    <p><strong>Callisto:</strong> “Seus irmãos fugiram e te deixaram aqui? Tsc... E dizem que eu sou o monstro.”</p>
+    <button id="resposta4" class="novel">“Eles não me abandonaram. Só... estavam ocupados.”</button>
+    <button id="resposta5" class="novel">“Você está certo. Eles nunca se importaram.”</button>
+    <button id="resposta6" class="novel">(Evitar olhar nos olhos dele)</button>
+  </section>
+
+  <script src="callisto3.js"></script>
+</body>
+</html>

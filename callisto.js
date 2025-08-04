@@ -19,7 +19,7 @@ function mostrarResultado(texto) {
 }
 
 opcao1.addEventListener("click", () => {
-    pontosCallisto += 10;
+    pontosCallisto += 2;
     mostrarResultado("<p><strong>Callisto sorri largo, intrigado.</strong><br>‘Você é ousada. Espero que continue viva por mais alguns dias.’<br><em>Afeto +10</em></p>");
     localStorage.setItem("callistoPontos", pontosCallisto); // salva os pontos
     setTimeout(() => {
