@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rota de Derrick - Jantar da Família</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Derrick Eckart - O Jantar da Família</h1>
+    <p>O duque organizou um jantar para comemorar o sucesso da caçada. O ambiente é tenso, e os olhares dos seus irmãos pesam sobre você.</p>
+  </header>
+
+  <section class="caixa-dialogo" id="inicioJantar">
+    <p>Derrick Eckart, o herdeiro, observa você com a mesma expressão fria de sempre. Ele abaixa a cabeça para a comida, mas logo volta a olhar para você, um brilho de desdém em seus olhos azuis.</p>
+    <p><strong>Derrick:</strong> “Não sei por que o duque se preocupa tanto. Sua presença só nos traz desgraças. Onde está o anel da família? Você o usava até ontem.”</p>
+    <button id="resposta1" class="novel">“Eu o dei a Yvonne, a verdadeira filha do duque.”</button>
+    <button id="resposta2" class="novel">“Não é da sua conta. Eu o guardei.”</button>
+    <button id="resposta3" class="novel">“Eu me pergunto a mesma coisa. Por que o duque me resgatou?”</button>
+  </section>
+
+  <section class="caixa-dialogo" id="cenaResposta1" style="display: none;">
+    <p><strong>Derrick:</strong> “Ainda se faz de santa? Não é à toa que foi abandonada. Pobre alma... ou seria uma mentirosa?”</p>
+    <p id="pontosDerrick1">Afeição Derrick: +5</p>
+    <button id="continuarCena1" class="novel">“...”</button>
+  </section>
+
+  <section class="caixa-dialogo" id="cenaResposta2" style="display: none;">
+    <p><strong>Derrick:</strong> “Você realmente tem a audácia de falar assim comigo, sua... intrusa.”</p>
+    <p id="pontosDerrick2">Afeição Derrick: -10</p>
+    <button id="continuarCena2" class="novel">“...”</button>
+  </section>
+
+  <section class="caixa-dialogo" id="cenaResposta3" style="display: none;">
+    <p><strong>Derrick:</strong> “Para de me olhar com esses olhos de cachorrinho. Você acha que me engana com essas atitudes?”</p>
+    <p id="pontosDerrick3">Afeição Derrick: 0</p>
+    <button id="continuarCena3" class="novel">“...”</button>
+  </section>
+
+  <section class="caixa-dialogo" id="confrontoJantar" style="display: none;"> 
+    <p>O duque olha para você, preocupado. O clima na mesa piorou. <strong>Derrick</strong>, no entanto, continua a te encarar, desafiador.</p>
+    <p><strong>Derrick:</strong> “O anel pertence a Yvonne. Você não passa de uma intrusa, não importa o que o duque diga.”</p>
+    <button id="resposta4" class="novel">“Você não me conhece. Você não sabe o que eu fiz por esta família.”</button>
+    <button id="resposta5" class="novel">“Eu sou a única que pode salvar a sua irmã.”</button>
+    <button id="resposta6" class="novel">“Não fale da Yvonne na minha frente. Eu não sou ela.”</button>
+  </section>
+
+  <!-- ✅ ESTA É A PARTE NOVA E NECESSÁRIA -->
+  <section class="caixa-dialogo" id="mensagemCentral" style="display: none;">
+    <p id="mensagemTexto"></p>
+    <div id="botoesMensagem"></div>
+  </section>
+
+  <script src="derrick.js"></script>
+</body>
+</html>
