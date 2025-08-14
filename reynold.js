@@ -13,20 +13,16 @@ const mostrarMensagem = (html) => {
   }, 3000);
 };
 
-const mostrarCena = (id) => {
-  document.querySelectorAll("section").forEach(section => {
-    section.style.display = "none";
-  });
-  document.getElementById(id).style.display = "block";
-};
-
 const atualizarLocalStorage = () => {
   localStorage.setItem("pontosReynold", pontosReynold);
   atualizarPontos();
 };
 
 const gameOver = (mensagem) => {
-  mostrarCena("gameOver");
+  document.querySelectorAll("section").forEach(section => {
+    section.style.display = "none";
+  });
+  document.getElementById("gameOver").style.display = "block";
   document.getElementById("gameOverTexto").innerText = mensagem;
 };
 
@@ -39,21 +35,28 @@ const exibirFinal = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   atualizarPontos();
-  mostrarCena("revelacaoCena");
+
+  // Mostrar revelacaoCena no início
+  document.querySelectorAll("section").forEach(section => {
+    section.style.display = "none";
+  });
+  document.getElementById("revelacaoCena").style.display = "block";
 
   // CENA 1
   document.getElementById("aceitarDesculpa").addEventListener("click", () => {
     pontosReynold += 5;
     atualizarLocalStorage();
     mostrarMensagem("<p><strong>Reynold</strong> suspira, aliviado.</p><p><em>Afeição +5</em></p>");
-    mostrarCena("fugaCena");
+    document.getElementById("revelacaoCena").style.display = "none";
+    document.getElementById("fugaCena").style.display = "block";
   });
 
   document.getElementById("recusarDesculpa").addEventListener("click", () => {
-    pontosReynold -= 5;
+    pontosReynold -= 10;
     atualizarLocalStorage();
-    mostrarMensagem("<p><strong>Reynold</strong> fecha a expressão. <em>Afeição -5</em></p>");
-    mostrarCena("fugaCena");
+    mostrarMensagem("<p><strong>Reynold</strong> fecha a expressão. <em>Afeição -10</em></p>");
+    document.getElementById("revelacaoCena").style.display = "none";
+    document.getElementById("fugaCena").style.display = "block";
   });
 
   // CENA 2
@@ -61,7 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
     pontosReynold += 2;
     atualizarLocalStorage();
     mostrarMensagem("<p><span class='nomereynold'>Reynold</span> te segura com firmeza. <em>“Viu só? Eu disse.”</em></p><p><em>Afeição +2</em></p>");
-    mostrarCena("cenaDesafio");
+    document.getElementById("fugaCena").style.display = "none";
+    document.getElementById("cenaDesafio").style.display = "block";
   });
 
   document.getElementById("ficarcorda").addEventListener("click", () => {
@@ -71,7 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
       pontosReynold += 5;
       atualizarLocalStorage();
       mostrarMensagem("<p><span class='nomereynold'>Reynold</span> te agarra no ar. <em>“Você não tem jeito.”</em></p><p><em>Afeição +5</em></p>");
-      mostrarCena("cenaDesafio");
+      document.getElementById("fugaCena").style.display = "none";
+      document.getElementById("cenaDesafio").style.display = "block";
     }
   });
 
@@ -80,14 +85,16 @@ document.addEventListener("DOMContentLoaded", () => {
     pontosReynold += 2;
     atualizarLocalStorage();
     mostrarMensagem("<p><span class='nomereynold'>Reynold</span> ama sua coragem.</p><p><em>Afeição +2</em></p>");
-    mostrarCena("cenaAparte");
+    document.getElementById("cenaDesafio").style.display = "none";
+    document.getElementById("cenaAparte").style.display = "block";
   });
 
   document.getElementById("observarDesafio").addEventListener("click", () => {
     pontosReynold += 5;
     atualizarLocalStorage();
     mostrarMensagem("<p><span class='nomereynold'>Reynold</span> ainda tenta te impressionar.</p><p><em>Afeição +5</em></p>");
-    mostrarCena("cenaAparte");
+    document.getElementById("cenaDesafio").style.display = "none";
+    document.getElementById("cenaAparte").style.display = "block";
   });
 
   // CENA 4
@@ -95,18 +102,20 @@ document.addEventListener("DOMContentLoaded", () => {
     pontosReynold += 3;
     atualizarLocalStorage();
     mostrarMensagem("<p><span class='nomereynold'>Reynold</span> começa a ver você diferente.</p><p><em>Afeição +3</em></p>");
-    mostrarCena("cenaFinal");
+    document.getElementById("cenaAparte").style.display = "none";
+    document.getElementById("cenaFinal").style.display = "block";
     exibirFinal();
   });
 
   document.getElementById("respostaSarcástica").addEventListener("click", () => {
-    pontosReynold -= 10;
+    pontosReynold -= 12;
     atualizarLocalStorage();
     if (pontosReynold < 0) {
       gameOver("Sua atitude o afasta. Ele some no festival. GAME OVER.");
     } else {
       mostrarMensagem("<p><span class='nomereynold'>Reynold</span> revira os olhos. <em>“Você podia tentar ser gentil.”</em></p><p><em>Afeição -10</em></p>");
-      mostrarCena("cenaFinal");
+      document.getElementById("cenaAparte").style.display = "none";
+      document.getElementById("cenaFinal").style.display = "block";
       exibirFinal();
     }
   });
