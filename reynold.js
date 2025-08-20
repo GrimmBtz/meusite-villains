@@ -26,12 +26,7 @@ const gameOver = (mensagem) => {
   document.getElementById("gameOverTexto").innerText = mensagem;
 };
 
-const exibirFinal = () => {
-  const final = document.getElementById("dialogoFinal");
-  final.innerHTML = pontosReynold >= 25
-    ? `<p><span class="nomereynold">Reynold</span> sorri para você. <em>"Então... É isso. Chegamos. Foi legal, tá?"</em></p>`
-    : `<p><span class="nomereynold">Reynold</span> evita contato visual. <em>"É isso. Não conte a ninguém."</em></p>`;
-};
+// A função exibirFinal foi removida. O código dela foi movido para os EventListeners.
 
 document.addEventListener("DOMContentLoaded", () => {
   atualizarPontos();
@@ -59,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("fugaCena").style.display = "block";
   });
 
-  // CENA 2
+  // segunda cEna 
   document.getElementById("pularReynold").addEventListener("click", () => {
     pontosReynold += 2;
     atualizarLocalStorage();
@@ -80,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // CENA 3
+  // CENA tres
   document.getElementById("aceitarDesafio").addEventListener("click", () => {
     pontosReynold += 2;
     atualizarLocalStorage();
@@ -104,7 +99,12 @@ document.addEventListener("DOMContentLoaded", () => {
     mostrarMensagem("<p><span class='nomereynold'>Reynold</span> começa a ver você diferente.</p><p><em>Afeição +3</em></p>");
     document.getElementById("cenaAparte").style.display = "none";
     document.getElementById("cenaFinal").style.display = "block";
-    exibirFinal();
+
+    // Lógica do diálogo final movida para cá
+    const dialogoFinal = document.getElementById("dialogoFinal");
+    dialogoFinal.innerHTML = pontosReynold >= 25
+      ? `<p><span class="nomereynold">Reynold</span> sorri para você. <em>"Então... É isso. Chegamos. Foi legal, tá?"</em></p>`
+      : `<p><span class="nomereynold">Reynold</span> evita contato visual. <em>"É isso. Não conte a ninguém."</em></p>`;
   });
 
   document.getElementById("respostaSarcástica").addEventListener("click", () => {
@@ -116,7 +116,12 @@ document.addEventListener("DOMContentLoaded", () => {
       mostrarMensagem("<p><span class='nomereynold'>Reynold</span> revira os olhos. <em>“Você podia tentar ser gentil.”</em></p><p><em>Afeição -10</em></p>");
       document.getElementById("cenaAparte").style.display = "none";
       document.getElementById("cenaFinal").style.display = "block";
-      exibirFinal();
+
+      // Lógica do diálogo final movida para cá
+      const dialogoFinal = document.getElementById("dialogoFinal");
+      dialogoFinal.innerHTML = pontosReynold >= 25
+        ? `<p><span class="nomereynold">Reynold</span> sorri para você. <em>"Então... É isso. Chegamos. Foi legal, tá?"</em></p>`
+        : `<p><span class="nomereynold">Reynold</span> evita contato visual. <em>"É isso. Não conte a ninguém."</em></p>`;
     }
   });
 });

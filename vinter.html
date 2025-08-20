@@ -12,7 +12,7 @@
 
   <div id="pontosVinter">Afeição Vinter: 0</div>
 
-  <!-- Rota do Vinter - Início -->
+  <!-- primeira secção da rota do vinter, vou esparar usando comentarios para saber certinho -->
   <section id="inicioVinter" class="caixa-dialogo">
     <h3 class="historia-texto">Um convite incomum</h3>
     <p>Durante a noite, um lenço mágico voa até sua janela... e se transforma em um coelho que fala:</p>
@@ -20,7 +20,7 @@
     <button id="aceitarConviteVinter" class="novel">Seguir o coelho</button>
     <button id="ignorarConviteVinter" class="novel">Ignorar (parece uma armadilha)</button>
   </section>
-
+<!--quando a penelope aparece no clube de mascara -->
   <section id="chegadaClube" class="caixa-dialogo" style="display: none;">
     <p>Você entra no clube escondida sob uma máscara mágica. Um homem com uma máscara de coelho te encara.</p>
     <p><strong>Vinter:</strong> <em>“Você... quem é você? Como entrou aqui?”</em></p>
@@ -34,8 +34,24 @@
     <button id="revelarIdentidade" class="novel">Revelar quem é</button>
     <button id="manterSegredo" class="novel">Manter o disfarce</button>
   </section>
+  
+  <section id="testeMagia" class="caixa-dialogo" style="display: none;">
+        <p>Vinter a leva para uma sala secreta. Ele lhe dá um bastão mágico e pede que ela o use. Vinter a observa de longe.</p>
+        <p><strong>Vinter:</strong> <em>“Tente canalizar sua magia para o bastão. Eu preciso ver o quão forte ela é.”</em></p>
+        <button id="usarMagia" class="novel">Tentar canalizar a magia</button>
+        <button id="mentirMagia" class="novel">Dizer que não tem magia</button>
+    </section>
 
-  <!-- Caixa de mensagem final -->
+    <section id="desafioPurificacao" class="caixa-dialogo" style="display: none;">
+        <p>A luz purificadora atinge Vinter, mas ele grita de dor. A energia corrompida se debate dentro dele. Você deve agir rápido!</p>
+        <div class="timer">Tempo restante: <span id="contador">10</span></div>
+        <button id="iniciarPurificacao" class="novel">Começar a purificação</button>
+    </section>
+
+    <section id="finalPurificacaoSucesso" class="caixa-dialogo" style="display: none;"></section>
+    <section id="finalPurificacaoFalha" class="caixa-dialogo" style="display: none;"></section>
+
+  <!-- apenas um caixa de mensagem para o "final" talvez um final, tem muita coisa ainda. Caio, adicionce mais conteudo aqui  -->
   <section id="finalRotaVinter" class="caixa-dialogo" style="display: none;"></section>
 
   <footer>
