@@ -1,57 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Callisto Regulus - Encontro e Banquete</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+ <title>Callisto Regulus - Encontro e Banquete</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
+ <header>
+   <h1>Callisto Regulus - Encontro na Floresta e Banquete de Caça</h1>
+   </header>
 
-  <header>
-    <h1>Callisto Regulus - Encontro na Floresta e Banquete de Caça</h1>
-  </header>
+ <section class="caixa-dialogo" id="inicioFloresta">
+ <p>Criaturas mágicas explodem ao seu redor. Seus irmãos desapareceram, deixando você sozinha. Quando tudo parece perdido, uma espada dourada corta o ar. <strong>Callisto Regulus</strong> surge diante de você, matando os monstros com precisão fria.</p>
+ <p><strong>Callisto:</strong> “Isso são guardiões, Eckhart? Que piada...”</p>
+ <button id="resposta1" class="novel">“Eu não pedi para ser salva.”</button>
+ <button id="resposta2" class="novel">“Você... me salvou?”</button>
+ <button id="resposta3" class="novel">(Ficar em silêncio)</button>
+</section>
 
-  <!-- Cena 1: Encontro na Floresta -->
-  <section class="caixa-dialogo" id="inicioFloresta">
-    <p>Criaturas mágicas explodem ao seu redor. Seus irmãos desapareceram, deixando você sozinha. Quando tudo parece perdido, uma espada dourada corta o ar. <strong>Callisto Regulus</strong> surge diante de você, matando os monstros com precisão fria.</p>
-    <p><strong>Callisto:</strong> “Isso são guardiões, Eckhart? Que piada...”</p>
-    <button id="resposta1" class="novel">“Eu não pedi para ser salva.”</button>
-    <button id="resposta2" class="novel">“Você... me salvou?”</button>
-    <button id="resposta3" class="novel">(Ficar em silêncio)</button>
-  </section>
+ <section class="caixa-dialogo" id="respostaCena" style="display:none;">
+ <div id="respostaTexto"></div>
+ <p id="pontosCallisto" class="resposta">Afeição Callisto: 0</p>
+ </section>
 
-  <!-- Cena 1: Resposta da primeira escolha -->
-  <section class="caixa-dialogo" id="respostaCena" style="display:none;">
-    <div id="respostaTexto"></div>
-    <p id="pontosCallisto" class="resposta">Afeição Callisto: 0</p>
-  </section>
+ <section class="caixa-dialogo" id="callistoConfronto" style="display:none;">
+ <p><strong>Callisto:</strong> “Seus irmãos fugiram e te deixaram aqui? Tsc... E dizem que eu sou o monstro.”</p>
+ <button id="resposta4" class="novel">“Eles não me abandonaram. Só... estavam ocupados.”</button>
+ <button id="resposta5" class="novel">“Você está certo. Eles nunca se importaram.”</button>
+ <button id="resposta6" class="novel">(Evitar olhar nos olhos dele)</button>
+ </section>
 
-  <!-- Cena 2: Confronto com os irmãos -->
-  <section class="caixa-dialogo" id="callistoConfronto" style="display:none;">
-    <p><strong>Callisto:</strong> “Seus irmãos fugiram e te deixaram aqui? Tsc... E dizem que eu sou o monstro.”</p>
-    <button id="resposta4" class="novel">“Eles não me abandonaram. Só... estavam ocupados.”</button>
-    <button id="resposta5" class="novel">“Você está certo. Eles nunca se importaram.”</button>
-    <button id="resposta6" class="novel">(Evitar olhar nos olhos dele)</button>
-  </section>
-
-  <!-- Cena 3: Banquete de Caça -->
   <section class="caixa-dialogo" id="banqueteCena" style="display:none;">
-    <p>Você retorna ao banquete. O ambiente está animado, mas as pessoas ainda sussurram sobre sua aparição na floresta. <strong>Callisto</strong>, que já havia saído, reaparece e se dirige a você.</p>
-    <p><strong>Callisto:</strong> “Eckhart, venha. Não gosto de ter minhas coisas longe dos meus olhos.”</p>
-    <p>A atenção de todos se volta para vocês dois. Os outros alvos parecem chocados e irritados.</p>
-    <p>Como você responde à declaração pública dele?</p>
-    <button id="aceitarConvite" class="novel">“Sim, Alteza.”</button>
-    <button id="recusarConvite" class="novel">“Eu preciso encontrar meus irmãos.”</button>
-    <button id="ignorarConvite" class="novel">(Fingir que não ouviu)</button>
+ <p>Você retorna ao banquete. O ambiente está animado, mas as pessoas ainda sussurram sobre sua aparição na floresta. <strong>Callisto</strong>, que já havia saído, reaparece e se dirige a você.</p>
+<p><strong>Callisto:</strong> “Eckhart, venha. Não gosto de ter minhas coisas longe dos meus olhos.”</p>
+<p>A atenção de todos se volta para vocês dois. Os outros alvos parecem chocados e irritados.</p>
+ <p>Como você responde à declaração pública dele?</p>
+ <button id="aceitarConvite" class="novel">“Sim, Alteza.”</button>
+ <button id="recusarConvite" class="novel">“Eu preciso encontrar meus irmãos.”</button>
+ <button id="ignorarConvite" class="novel">(Fingir que não ouviu)</button>
+</section>
+
+ <section class="caixa-dialogo" id="banqueteResposta" style="display:none;">
+ <div id="respostaBanqueteTexto"></div>
+  <p id="pontosCallistoBanquete" class="historia-texto">Afeição Callisto: 0</p>
+ <button id="avancarBanquete" class="novel">Avançar para a próxima cena</button>
+ </section>
+
+  <section class="caixa-dialogo" id="cenaCacada" style="display:none;">
+    <h2>Evento da Caçada ao Dragão</h2>
+    <p>É o grande dia da caçada. Enquanto se prepara, o Príncipe Callisto se aproxima, com um sorriso sádico. "Não se perca, Princesa Penelope. Não tenho tempo para procurar flores indefesas." Ele te dá uma escolha: caçar com ele ou ficar na zona segura.</p>
+    <div class="opcoes">
+        <button id="btnSeguirCallisto" class="novel">Seguir Callisto e caçar o monstro</button>
+        <button id="btnFicarSegura" class="novel">Ignorar o pedido e ficar na zona segura</button>
+    </div>
+    <div class="pontos" id="pontosCacada">Afeição Callisto: 0</div>
   </section>
 
-  <!-- Cena 3: Resposta do Banquete -->
-  <section class="caixa-dialogo" id="banqueteResposta" style="display:none;">
-    <div id="respostaBanqueteTexto"></div>
-    <p id="pontosCallistoBanquete" class="historia-texto">Afeição Callisto: 0</p>
+  <section class="caixa-dialogo" id="cacadaRespostas" style="display:none;">
+      <p id="textoCacada"></p>
+      <button id="avancarCacada" class="novel">Continuar</button>
   </section>
 
-  <script src="callisto3.js"></script>
+ <script src="callisto3.js"></script>
 </body>
 </html>

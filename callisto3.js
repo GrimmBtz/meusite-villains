@@ -1,19 +1,28 @@
+// Afeição inicial do Callisto. O valor é recuperado do armazenamento local para que o progresso seja mantido.
 let pontosCallisto = parseInt(localStorage.getItem("callistoPontos")) || 0;
 
-// Elementos cena floresta
+// Seleciona os elementos do HTML para a cena da floresta (primeira interação)
 const inicioFloresta = document.getElementById("inicioFloresta");
 const respostaCena = document.getElementById("respostaCena");
-const callistoConfronto = document.getElementById("callistoConfronto");
 const pontosCallistoElemento = document.getElementById("pontosCallisto");
 const respostaTexto = document.getElementById("respostaTexto");
 
-// Elementos cena banquete
+// Seleciona os elementos para a cena de confronto com Callisto
+const callistoConfronto = document.getElementById("callistoConfronto");
+
+// Seleciona os elementos para a cena do banquete
 const banqueteCena = document.getElementById("banqueteCena");
 const banqueteResposta = document.getElementById("banqueteResposta");
 const respostaBanqueteTexto = document.getElementById("respostaBanqueteTexto");
 const pontosCallistoBanquete = document.getElementById("pontosCallistoBanquete");
 
-// Botões cena floresta
+// Seleciona os elementos para a cena da caçada (NOVO)
+const cenaCacada = document.getElementById("cenaCacada");
+const cacadaRespostas = document.getElementById("cacadaRespostas");
+const textoCacada = document.getElementById("textoCacada");
+const pontosCacada = document.getElementById("pontosCacada");
+
+// Botões da cena floresta (primeira interação)
 const btnResposta1 = document.getElementById("resposta1");
 const btnResposta2 = document.getElementById("resposta2");
 const btnResposta3 = document.getElementById("resposta3");
@@ -21,43 +30,50 @@ const btnResposta4 = document.getElementById("resposta4");
 const btnResposta5 = document.getElementById("resposta5");
 const btnResposta6 = document.getElementById("resposta6");
 
-// Botões cena banquete
+// Botões da cena banquete
 const btnAceitarConvite = document.getElementById("aceitarConvite");
 const btnRecusarConvite = document.getElementById("recusarConvite");
 const btnIgnorarConvite = document.getElementById("ignorarConvite");
+const btnAvancarBanquete = document.getElementById("avancarBanquete");
 
-// Atualiza o display da afeição nas duas cenas
+// Botões da caçada (NOVO)
+const btnSeguirCallisto = document.getElementById("btnSeguirCallisto");
+const btnFicarSegura = document.getElementById("btnFicarSegura");
+
+// Função para atualizar o texto da afeição em todas as cenas
 function atualizarPontosCallisto() {
   pontosCallistoElemento.textContent = "Afeição Callisto: " + pontosCallisto;
   pontosCallistoBanquete.textContent = "Afeição Callisto: " + pontosCallisto;
+  pontosCacada.textContent = "Afeição Callisto: " + pontosCallisto;
 }
 
-// Mostra resposta da primeira cena (floresta)
+// Mostra a resposta da primeira cena (floresta) e avança para o confronto
 function mostrarRespostaPrimeiraCena(texto) {
   inicioFloresta.style.display = "none";
   respostaTexto.innerHTML = texto;
   respostaCena.style.display = "block";
 
+  // Define um tempo de 5 segundos antes de avançar para a próxima cena
   setTimeout(() => {
     respostaCena.style.display = "none";
     callistoConfronto.style.display = "block";
   }, 5000);
 }
 
-// Mostra resposta final da segunda cena (confronto)
+// Mostra a resposta final do confronto e avança para o banquete
 function mostrarRespostaFinal(texto) {
   callistoConfronto.style.display = "none";
   respostaTexto.innerHTML = texto;
   respostaCena.style.display = "block";
 
+  // Define um tempo de 5 segundos antes de avançar para a próxima cena
   setTimeout(() => {
     respostaCena.style.display = "none";
-    // Próxima cena (banquete)
     banqueteCena.style.display = "block";
   }, 5000);
 }
 
-// Mostra resposta do banquete (última cena aqui)
+// Mostra a resposta do banquete (última cena antes da caçada)
 function mostrarRespostaBanquete(texto) {
   banqueteCena.style.display = "none";
   respostaBanqueteTexto.innerHTML = texto;
@@ -65,7 +81,15 @@ function mostrarRespostaBanquete(texto) {
   atualizarPontosCallisto();
 }
 
-// Eventos cena floresta - primeira interação
+// Mostra a resposta da caçada (NOVO)
+function mostrarRespostaCacada(texto) {
+  cenaCacada.style.display = "none";
+  textoCacada.innerHTML = texto;
+  cacadaRespostas.style.display = "block";
+  atualizarPontosCallisto();
+}
+
+// Eventos da cena da floresta - primeira interação
 btnResposta1.addEventListener("click", () => {
   pontosCallisto += 2;
   localStorage.setItem("callistoPontos", pontosCallisto);
@@ -93,7 +117,7 @@ btnResposta3.addEventListener("click", () => {
   );
 });
 
-// Eventos cena floresta - segunda interação (confronto)
+// Eventos da cena da floresta - segunda interação (confronto)
 btnResposta4.addEventListener("click", () => {
   pontosCallisto -= 2;
   localStorage.setItem("callistoPontos", pontosCallisto);
@@ -113,7 +137,6 @@ btnResposta5.addEventListener("click", () => {
 });
 
 btnResposta6.addEventListener("click", () => {
-  // pontosCallisto += 0; desnecessário
   localStorage.setItem("callistoPontos", pontosCallisto);
   atualizarPontosCallisto();
   mostrarRespostaFinal(
@@ -121,7 +144,7 @@ btnResposta6.addEventListener("click", () => {
   );
 });
 
-// Eventos cena banquete
+// Eventos da cena do banquete
 btnAceitarConvite.addEventListener("click", () => {
   pontosCallisto += 5;
   localStorage.setItem("callistoPontos", pontosCallisto);
@@ -144,4 +167,28 @@ btnIgnorarConvite.addEventListener("click", () => {
   mostrarRespostaBanquete(
     '<p><strong>Callisto:</strong> <em>“Ignorar é a pior resposta que poderia dar.”</em></p>'
   );
+});
+
+// Evento para avançar do banquete para a caçada
+btnAvancarBanquete.addEventListener("click", () => {
+    banqueteResposta.style.display = "none";
+    cenaCacada.style.display = "block";
+    atualizarPontosCallisto();
+});
+
+// Eventos da cena da caçada (NOVO)
+btnSeguirCallisto.addEventListener("click", () => {
+    pontosCallisto += 15;
+    localStorage.setItem("callistoPontos", pontosCallisto);
+    mostrarRespostaCacada(
+        `<p><strong>Callisto:</strong> <em>"Ah, que bom. Pensei que teria que te arrastar."</em> Ele sorri, um brilho perigoso em seus olhos. <em>"Vamos ver se você é tão esperta quanto parece."</em></p><p>Você encontra o monstro e luta ao lado dele. <strong>Afeição +15</strong></p>`
+    );
+});
+
+btnFicarSegura.addEventListener("click", () => {
+    pontosCallisto -= 20;
+    localStorage.setItem("callistoPontos", pontosCallisto);
+    mostrarRespostaCacada(
+        `<p><strong>Penelope:</strong> <em>"Não, obrigada. Prefiro ficar onde é seguro."</em></p><p>A expressão de Callisto congela. <em>"Certo. Que pena. Pensei que teríamos diversão juntos."</em> Ele dá as costas e vai embora, deixando-a para trás. <strong>Afeição -20</strong></p>`
+    );
 });
