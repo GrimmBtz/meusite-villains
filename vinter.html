@@ -20,14 +20,14 @@
     <button id="aceitarConviteVinter" class="novel">Seguir o coelho</button>
     <button id="ignorarConviteVinter" class="novel">Ignorar (parece uma armadilha)</button>
   </section>
-<!--quando a penelope aparece no clube de mascara -->
+<!--quando a penelope aparece no clube lá branco do coelho  -->
   <section id="chegadaClube" class="caixa-dialogo" style="display: none;">
     <p>Você entra no clube escondida sob uma máscara mágica. Um homem com uma máscara de coelho te encara.</p>
     <p><strong>Vinter:</strong> <em>“Você... quem é você? Como entrou aqui?”</em></p>
     <button id="responderMisteriosa" class="novel">Responder de forma misteriosa</button>
     <button id="fugirClube" class="novel">Tentar fugir sem ser notada</button>
   </section>
-
+<!-- encontro com vinter, fiquei com preguiça de fazer nota para cada secção, então abaixo é continuação-->
   <section id="interacaoVinter" class="caixa-dialogo" style="display: none;">
     <p>Vinter observa cada movimento seu, intrigado. As crianças do clube correm ao seu redor tentando te proteger.</p>
     <p><strong>Vinter:</strong> <em>“Você me lembra alguém... mas não posso ver através da sua máscara.”</em></p>
@@ -50,6 +50,39 @@
 
     <section id="finalPurificacaoSucesso" class="caixa-dialogo" style="display: none;"></section>
     <section id="finalPurificacaoFalha" class="caixa-dialogo" style="display: none;"></section>
+<section id="confissaoVinter" class="caixa-dialogo" style="display: none;">
+  <p>Você toca em Vinter, e uma luz forte e quente purifica o corpo dele. Ele ofega, e pela primeira vez, sorri para você, um sorriso genuíno.</p>
+  <p><strong>Vinter:</strong> <em>“Você... você me salvou.”</em></p>
+  <p>Ele a leva para o jardim, revelando o símbolo da lua no braço e uma cicatriz. Ele está prestes a contar a verdade sobre ser um bruxo...</p>
+  <button id="ouvirConfissao" class="novel">Ouvir a confissão</button>
+  <button id="distanciarConfissao" class="novel">Manter distância</button>
+</section>
+
+<section id="missaoFloresta" class="caixa-dialogo" style="display: none;">
+  <div class="quadro-sistema">
+    <h4>[Missão do Sistema]</h4>
+    <p><strong>Objetivo:</strong> Sobreviva na Floresta Amaldiçoada. Escolha um alvo de captura para acompanhá-la.</p>
+    <p><strong>Recompensa:</strong> Afeição Vinter (+10)</p>
+    <p><strong>Penalidade:</strong> Morte por Bandeira da Morte.</p>
+  </div>
+  <p>O sistema aciona uma nova missão de sobrevivência. Você precisa ir a uma floresta perigosa. Vinter surge à sua frente, oferecendo ajuda.</p>
+  <p><strong>Vinter:</strong> <em>“Eu a levarei para a floresta. Confie em mim.”</em></p>
+  <button id="confiarEmVinter" class="novel">Confiar em Vinter e ir com ele</button>
+  <button id="irSozinha" class="novel">Ir sozinha (parece perigoso)</button>
+</section>
+
+<section id="revelacaoVinter" class="caixa-dialogo" style="display: none;">
+  <p>Vinter explica que a floresta é o seu refúgio, mas a magia corrompida está afetando até ele. Ele olha para você e um pequeno ícone de coração dourado aparece sobre a cabeça dele. A afeição de Vinter mudou para **50%**.</p>
+  <p><strong>Vinter:</strong> <em>"Eu não me importo se o mundo me odeia, contanto que você esteja ao meu lado."</em></p>
+  <button id="proximoPasso" class="novel">Próximo</button>
+</section>
+
+<section id="proximaRota" class="caixa-dialogo" style="display: none;">
+  <p>A rota do Vinter continua... O que o futuro reserva para Penelope e o misterioso bruxo?</p>
+  <a href="rotainicio.html" class="btn">Continuar a história...</a>
+</section>
+
+
 
   <!-- apenas um caixa de mensagem para o "final" talvez um final, tem muita coisa ainda. Caio, adicionce mais conteudo aqui  -->
   <section id="finalRotaVinter" class="caixa-dialogo" style="display: none;"></section>

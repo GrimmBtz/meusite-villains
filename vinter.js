@@ -54,13 +54,13 @@ document.getElementById("manterSegredo").addEventListener("click", () => {
     atualizarPontos(5);
 });
 
-// Lógica para o Teste de Magia
+// Lógica do Teste de Magia
 document.getElementById("usarMagia").addEventListener("click", () => {
     document.getElementById("testeMagia").style.display = "none";
     document.getElementById("desafioPurificacao").style.display = "block";
     
     // Inicia o contador para o desafio
-    let tempoRestante = 10;
+    let tempoRestante = 5;
     const contadorElemento = document.getElementById("contador");
     contadorElemento.textContent = tempoRestante;
 
@@ -72,9 +72,9 @@ document.getElementById("usarMagia").addEventListener("click", () => {
             // Chama a função de falha
             falhaPurificacao();
         }
-    }, 1000);
+    }, 500);
 
-    // Evento para o botão de purificação
+    // Evento para o botão de purificação para ficar mais interativo
     document.getElementById("iniciarPurificacao").addEventListener("click", () => {
         clearInterval(contagemRegressiva);
         // Chama a função de sucesso
@@ -90,15 +90,15 @@ document.getElementById("mentirMagia").addEventListener("click", () => {
 
 // Funções para o desafio
 const sucessoPurificacao = () => {
-    mostrarFinalSucesso("<p>Você toca em Vinter, e uma luz forte e quente purifica o corpo dele. Ele ofega, e pela primeira vez, sorri para você, um sorriso genuíno.</p><p><strong>Vinter:</strong> <em>“Você... você me salvou.”</em></p><p><strong>Afeição +25</strong></p>");
+    mostrarFinalSucesso("<p>Você toca em Vinter, e uma luz forte e quente purifica o corpo dele. Ele ofega, e pela primeira vez, sorri para você, um sorriso genuíno.</p><p><strong>Vinter:</strong> <em>“Você... você me salvou.”</em></p><p><strong>Afeição +9</strong></p>");
     document.getElementById("desafioPurificacao").style.display = "none";
-    atualizarPontos(25);
+    atualizarPontos(9);
 };
 
 const falhaPurificacao = () => {
-    mostrarFinalFalha("<p>O tempo se esgota. A magia corrompida de Vinter explode, jogando-a para longe. Ele cai de joelhos, e a escuridão o consome por completo.</p><p><strong>Penelope:</strong> <em>“Não...!”</em></p><p>Você sente uma dor terrível e cai no chão. O Vinter que você conheceu agora é apenas um vilão. <strong>Corte.</strong></p><p><strong>Afeição -100</strong></p>");
+    mostrarFinalFalha("<p>O tempo se esgota. A magia corrompida de Vinter explode, jogando-a para longe. Ele cai de joelhos, e a escuridão o consome por completo.</p><p><strong>Penelope:</strong> <em>“Não...!”</em></p><p>Você sente uma dor terrível e cai no chão. O Vinter que você conheceu agora é apenas um vilão. <strong>Corte.</strong></p><p><strong>Afeição -25</strong></p>");
     document.getElementById("desafioPurificacao").style.display = "none";
-    atualizarPontos(-100);
+    atualizarPontos(-25);
 };
 
 // aqui é a pontuação
