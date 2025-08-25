@@ -4,30 +4,63 @@
     <meta charset="UTF-8">
     <title>Rota de Eckles</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="icklestyle.css">
 </head>
 <body>
     <header>
         <h1>Rota de Eckles</h1>
-        <p>Você é Penelope Eckhart. Cuidado com o coração... e com a lâmina dele.</p>
+        <p>Você é Penelope Eckhart. Uma vida de escolhas. No Modo Difícil.</p>
     </header>
 
-    <section class="intro">
-        <p class="historia-texto"><strong>Floresta do Ducado Eckhart, fim de tarde.</strong>  
-        Você encontra um cavaleiro caído entre os arbustos. Ferido, acorrentado... mas ainda assim, com um olhar feroz.</p>
-        
-        <p>Ele ergue os olhos para você. "Vai me deixar morrer aqui... ou veio me salvar?"</p>
-        
-        <p><strong>Escolha sua resposta:</strong></p>
-
-        <div class="choice-box">
-            <button class="opcao" id="opcaoEckles1">"Eu vou te ajudar. Não se preocupe."</button>
-            <button class="opcao" id="opcaoEckles2">"Você mereceu isso."</button>
-            <button class="opcao" id="opcaoEckles3">(Ignorar e seguir adiante)</button>
-        </div>
+    <div id="pontosEckles">Afeição Eckles: 0</div>
+    
+    <section class="caixa-dialogo" id="parte1">
+        <p><strong>Mercado de escravos, capital do Império.</strong> Você, disfarçada, caminha por entre as jaulas. Seu olhar para em um escravo de cabelos prateados, acorrentado. Seus olhos estão vazios.</p>
+        <p>A multidão à sua volta grita e aterroriza o cavaleiro. Ele não reage. Mas você nota... o medidor de afeição dele está subindo.</p>
+        <p><strong>Decida o que fazer:</strong></p>
+        <button class="opcao" id="opcaoEckles1">"Eu compro ele." (80.000 moedas)</button>
+        <button class="opcao" id="opcaoEckles2">"É caro demais. Vou ignorar."</button>
+        <button class="opcao" id="opcaoEckles3">(Voltar para casa sem olhar para trás)</button>
     </section>
 
-    <section id="resultado" style="margin-top: 30px;"></section>
-    <p class="intro" id="pontosEckles" style="margin-top: 10px;">Afeição Eckles: 0</p>
+    <section class="caixa-dialogo" id="respostaCena" style="display:none;">
+        <div id="respostaTexto"></div>
+        <p id="pontosEcklesResposta" class="resposta">Afeição Eckles: 0</p>
+    </section>
+
+    <section class="caixa-dialogo" id="parte2" style="display:none;">
+        <p><strong>No Jardim do Ducado.</strong> O duque, seu pai, ordena que Eckles o siga para o campo de treinamento.</p>
+        <p>O corpo de Eckles enrijece. Seus olhos se encontram com os seus. Ele balança a cabeça sutilmente, recusando-se a ir.</p>
+        <p>"Eckles, você é um cavaleiro. Obedeça." - você diz, com um tom firme.</p>
+        <p><strong>Escolha sua resposta:</strong></p>
+        <button class="opcao" id="opcaoEckles4">"Vá com o meu pai. É para o seu bem."</button>
+        <button class="opcao" id="opcaoEckles5">"Deixe-o. Ele é meu cavaleiro."</button>
+    </section>
+    
+    <section class="caixa-dialogo" id="parte3" style="display:none;">
+        <p><strong>Evento de Caça Imperial.</strong> Um dragão ferido surge na floresta. Eckles aparece e se coloca na sua frente.</p>
+        <p>Ele o derrota, mas está terrivelmente ferido. Você decide o que fazer.</p>
+        <button class="opcao" id="opcaoEckles6">"Você está bem? Vamos cuidar de seus ferimentos."</button>
+        <button class="opcao" id="opcaoEckles7">"Eu não pedi para você me salvar!"</button>
+    </section>
+
+    <section class="caixa-dialogo" id="parte4" style="display:none;">
+        <p><strong>Pátio do Ducado.</strong> O Príncipe Herdeiro Callisto a visita. Enquanto vocês conversam, Eckles se aproxima, com o olhar fixo em vocês dois. Ele está claramente enciumado.</p>
+        <button class="opcao" id="opcaoEckles8">"Não, obrigada. Estou ocupada."</button>
+        <button class="opcao" id="opcaoEckles9">"Tudo bem... só por um momento."</button>
+    </section>
+
+    <section class="caixa-dialogo" id="parte5" style="display:none;">
+        <p><strong>Dias se passam.</strong> Você encontra Eckles no jardim, com um sorriso vazio. Ele foi manipulado por uma jovem de cabelos prateados.</p>
+        <button class="opcao" id="opcaoEckles10">"Eckles, você é meu. Lembre-se de quem te salvou."</button>
+        <button class="opcao" id="opcaoEckles11">"Eu te dou a sua liberdade. Fuja enquanto pode."</button>
+    </section>
+
+    <section class="caixa-dialogo" id="final-eckles" style="display:none;">
+        <h3>Fim da Rota de Eckles</h3>
+        <div id="final-narrativa"></div>
+        <button onclick="location.reload()">Jogar Novamente</button>
+    </section>
 
     <footer>
         <a href="historia.html" class="btn">Voltar</a>
