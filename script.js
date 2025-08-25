@@ -31,8 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
         introText.style.opacity = 1;
     }, 1000);
 
-    // Variável para guardar os pontos de afeição do Kallisto
-    let pontosCallisto = 0;
 
     // Pega os elementos do DOM
     const botaoirritada = document.getElementById("botaoirritada");
@@ -48,26 +46,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Função para mostrar resposta
     function mostrarMensagem(texto) {
-        respostaEscolha.innerText = texto;
+        respostaEscolha.innerHTML = texto;
     }
 
     // Eventos dos botões
     document.getElementById("botaoAceitar").addEventListener("click", () => {
-        mostrarMensagem("'Você chama isso de comida...? Não brinque comigo!! isso são só restos! que nojo' Penélope continua comendo mesmo assim, no mesmo momento entra o Renold (irmão do meio de Penélope). Renold pergunta se está tudo bem, quando percebe a comida estragada, reprendendo a empregada 'como se atreva a zombar dela dessa forma?' a punindo logo após. <strong>ESPERA UM POUCO, VAMOS TE MANDAR PARA PROXIMA PAGINA</strong>");
+        mostrarMensagem('<p class="nome-penelope">Penelope:</p><p><em>\'Você chama isso de comida...? Não brinque comigo!! isso são só restos! que nojo.\'</em></p><p>Mas, mesmo pensando nisso, Penelope continua comendo. No mesmo momento, entra <span class="nomereynold">Renold Eckhart</span>, o segundo filho da casa. Ele pergunta se está tudo bem, e quando percebe a comida estragada, repreende a empregada: <em>\'Como se atreve a zombar dela dessa forma?\'</em>, a punindo em seguida. Você continua a salvo por enquanto. <strong class="nome-sistema">ESPERA UM POUCO, VAMOS TE MANDAR PARA A PRÓXIMA PÁGINA OU CLIQUE NO BOTÃO ABAIXO</strong></p>');
         setTimeout(() => {
             window.location.href = "cap2.html";
-        }, 15000);
+        }, 25000);
+        document.getElementById("botaoProximo").style.display = "block";
+        document.getElementById("botaoProximo").addEventListener("click", () =>{
+            window.location.href = "cap2.html";
+        });
     });
 
     botaoirritada.addEventListener("click", function () {
-        pontosCallisto += 10;
-        mostrarMensagem("A empregada foi ate o Duque para conta sobre a sua birra. Seu irmão mais velho ouviu, te reprendeu  sua conduta é a proibindo até mesmo de beber água, morendo de fome nesta sala");
-        atualizarPontos();
+        mostrarMensagem('<p class="nome-penelope">Penelope:</p> <p><em>\'Chega! Eu não vou morrer assim!\'</em></p> <p>Você levanta a mesa, fazendo a comida podre voar por todo o quarto. A empregada, tremendo, corre para o Duque para relatar sua \'birra\'. Seu irmão mais velho, <span class="nomederick">Derrick Eckhart</span>, ouve a notícia e sua fúria é imediata. <em>\'Penelope, sua conduta é inaceitável!\'</em> Ele a repreende, proibindo-a até mesmo de beber água. Você é deixada trancada no quarto, morrendo de fome e sede. <strong class="nome-sistema">FIM PREMATURO.</strong></p>'); 
     });
 
     botaoFugir.addEventListener("click", function () {
-        pontosCallisto -= 5;
-        mostrarMensagem("Quando você pega a comida é força a empregada comer, o seu irmão do meio passou no mesmo instante, e acabou vendo a cena. Equanto ele tenta te separar da empregada, ele te antigi com um garfo no pescoço, acabando morrendo ali mesma");
+        mostrarMensagem('<p class="nome-penelope">Penelope:</p><p><em>\'Que tal você provar do seu próprio veneno?\'</em></p><p>Você pega a comida e força a empregada a comer, seu corpo pequeno se debatendo. É quando <span class="nomereynold">Reynold Eckhart</span> entra. Ele vê a cena e, em um acesso de raiva cega, tenta te separar dela. Em meio à confusão, uma ponta de garfo perfura seu pescoço. O sangue escorre. A tela escurece. Você morreu. <strong class="nome-sistema">FIM PREMATURO.</strong></p>');
         atualizarPontos();
     });
 

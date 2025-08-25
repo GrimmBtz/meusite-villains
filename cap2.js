@@ -48,7 +48,7 @@ btnFicarFesta.addEventListener("click", () => {
   btnArFresco.style.display = "none";
   btnFicarFesta.style.display = "none";
 
-  mostrarMensagem("<p>Você permanece na festa, tentando se manter invisível. Nada acontece... Mas você sente que perdeu algo importante.</p>");
+  mostrarMensagem("<p>Você permanece na festa, tentando se manter invisível. Nada acontece... Mas você sente que perdeu algo importante. Voltando para casa normalmente</p>");
 });
 
 // RESPOSTAS a Callisto
@@ -56,8 +56,10 @@ btnRespostaEducada.addEventListener("click", () => {
   pontosCallisto += 0;
   atualizarPontos();
   mostrarMensagem(`
-    <p><strong>Penelope:</strong> "Não foi minha intenção, Alteza... Por favor, me perdoe."</p>
-    <p><strong>Callisto:</strong> "Fique esperta da próxima vez. O jardim não perdoa tolos."</p>
+     <p><span class="nome-penelope">Penelope:</span> "Não foi minha intenção, Alteza... Por favor, me perdoe."</p>
+        <p><span class="nomecallisto">Callisto:</span> <em>"Uma desculpa? Que tedioso. Não perco meu tempo com ratos educados."</em></p>
+        <p><em>Ele baixa a espada. Por um momento, você respira aliviada... até que a lâmina volta a se erguer e, num movimento rápido, a cena escurece.</em></p>
+        <p><strong class="nome-sistema">FIM PREMATURO.</strong> Você foi morta por tédio.</p>
   `);
   callistoCena.style.display = "none";
 });
@@ -77,8 +79,8 @@ btnRespostaProvocacao.addEventListener("click", () => {
   pontosCallisto += 1;
   atualizarPontos();
   mostrarMensagem(`
-    <p><strong>Penelope:</strong> <em>"EU... EU-EU, EU GOSTO DE VOCÊ!"</em></p>
-    <p><strong>Callisto:</strong> <em>"Você é louca... mas talvez essa loucura seja sua força."</em></p>
+    <p><span class="nome-penelope">Penelope:</span>"EU... EU-EU, EU GOSTO DE VOCÊ!"</em></p>
+    <p><span class="nomecallisto">Callisto:</span> <em>"Você é louca... mas talvez essa loucura seja sua força."</em></p>
     <p><em>"Na próxima vez que nos encontrarmos, explique direitinho esse sentimento... Agora pode ir."</em></p>
   `);
   callistoCena.style.display = "none";
@@ -90,9 +92,9 @@ function mostrarCenaVinter() {
   vinterCena.style.display = "block";
   document.getElementById("textoVinter").innerHTML = `
     <p><em>Você avança pelo labirinto, a dor lateja como lembrança constante.</em></p>
-    <p><strong>Vinter:</strong> "Isso parece pior do que posso tratar sem ajuda, vou chamar os médicos para você."</p>
+    <p><strong>Vinter:</strong> "Este corte em seu pescoço, isso parece pior do que posso tratar sem ajuda, vou chamar os médicos para você."</p>
     <p><strong>Penelope:</strong> "Não precisa de médico."</p>
-    <p><strong>Vinter:</strong> "Então aceite esse lenço mágico pelo menos."</p>
+    <p><strong>Vinter:</strong> "Então aceite esse lenço mágico pelo menos, ele vai ajudar no ferimento."</p>
   `;
 }
 
@@ -101,23 +103,29 @@ btnVinterAceitar.addEventListener("click", () => {
   mostrarMensagem(`
     <p><strong>Penelope:</strong> Aceita o pano e o coloca no pescoço na ferida</p>
     <p><strong>Vinter:</strong> "Então escolha viver."</p>
+    <strong>Espere alguns segundos, você já ira para a continuação</strong>
   `);
   vinterCena.style.display = "none";
    document.getElementById("continuar").style.display = "block";
+   document.getElementById("continuar").addEventListener("click", () => {
+    window.location.href = "festival.html";
+   })
 });
 
 btnVinterPerguntar.addEventListener("click", () => {
   mostrarMensagem(`
-    <p><strong>Penelope:</strong> "O que é este pano... mágica?"</p>
-    <p><strong>Vinter:</strong> "Algo muito antigo. Não é para todos."</p>
+    <p><strong>Penelope:</strong> "O que é este pano... mágico?"</p>
+    <p><strong>Vinter:</strong> "É um pano que ajuda em ferimentos."</p>
   `);
   vinterCena.style.display = "none";
 });
 
 btnVinterIgnorar.addEventListener("click", () => {
   mostrarMensagem(`
-    <p><strong>Vinter:</strong> "Recuse sua salvação e aceite sua consequência."</p>
-    <p><em>Mesmo assim, ele coloca o pano sobre uma pedra próxima. Então desaparece.</em></p>
+ <p><span class="nome-penelope">Penelope:</span> <em>(Pensamento)</em> 'Este homem é assustador. Ele vai me matar se eu fizer qualquer coisa.' <em>Você o ignora e tenta fugir, mas é tarde demais.</em></p>
+        <p><span class="nome-vinter">Vinter:</span> "Uma pena. Você recusou o que lhe foi oferecido."</p>
+        <p><em>Sua visão escurece, e você cai no chão. O último som que você ouve é a voz de Vinter sussurrando, sua voz se perdendo no vento:</em> "O destino não perdoa aqueles que o evitam."</p>
+        <strong class="nome-sistema">FIM PREMATURO.</strong> Você sangrou até a morte.</p>
   `);
   vinterCena.style.display = "none";
 });

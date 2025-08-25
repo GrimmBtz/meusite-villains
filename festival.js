@@ -13,7 +13,7 @@ document.getElementById("buracomuro").addEventListener("click", () => {
 });
 
 document.getElementById("naofugir").addEventListener("click", () => {
-  mostrarMensagem("<p>Você decide não fugir. Mas sente que perdeu uma chance rara...</p>");
+  mostrarMensagem("<p>Você decide não fugir. Mas sente que perdeu uma chance rara...</p> <strong>Tentar Novamente?</strong>");
 });
 
 // agora quando aparece o reynold
@@ -32,7 +32,7 @@ document.getElementById("ficarcorda").addEventListener("click", () => {
 // aqui já é outra parte
 
 document.getElementById("aceitarfestival").addEventListener("click", () => {
-   mostrarMensagem("<p>Você tenta ir com Reynold já que apareceu é atrapalhou seus planos, mas aparece<span class='nomederick'>Derick</span>'A onde vocês pensam que vão a está hora da noite assim? <span class='nomereynold'>Reynold</span>: A Penélope quer ir ao festival, então vou acompanhar ela com seu guarda costa. <span class='nomederick'>Derick</span>: Mas são necessário dois guarda costas, então irei junto com vocês ao festival '</p>");
+   mostrarMensagem("<p>Você tenta ir com Reynold já que apareceu é atrapalhou seus planos de ir ao mercado de escravos para encontrar ickles, mas aparece<span class='nomederick'>Derick</span>'A onde vocês pensam que vão a está hora da noite assim? <span class='nomereynold'>Reynold</span>: A Penélope quer ir ao festival, então vou acompanhar ela com seu guarda costa. <span class='nomederick'>Derick</span>: Mas são necessário dois guarda costas, então irei junto com vocês ao festival '</p>");
   document.getElementById("missaoFestival").style.display = "none";
   document.getElementById("encontroDerrick").style.display = "block";
 });
@@ -50,7 +50,7 @@ document.getElementById("aceitarDerick").addEventListener("click", () => {
 });
 
 document.getElementById("recusarDerick").addEventListener("click", () => {
-  mostrarMensagem("<p>Você tenta fugir de <span class='nomederick'>Derick</span>, mas ele a intercepta no corredor. <em>“Acha mesmo que pode me enganar?”</em> Três dias de castigo. E sem janta.</p>");
+  mostrarMensagem("<p><span class='nome-penelope'>Penelope:</span> 'Eu não preciso de babá!'</p> <p>Você tenta fugir de <span class='nome-derick'>Derrick</span>, mas ele a intercepta no corredor, a mão firme em seu braço. <em>“Acha mesmo que pode me enganar?”</em> Ele a arrasta de volta para o quarto. Três dias de castigo. E sem janta.</p>");
   document.getElementById("encontroDerrick").style.display = "none";
 });
 
@@ -75,7 +75,7 @@ document.getElementById("cobrir10x").addEventListener("click", () => {
 });
 
 document.getElementById("naoLance").addEventListener("click", () => {
-  mostrarMensagem("<p><span class='nomeickles'>Ickles</span> é vendido para um estranho de olhar cruel. Missão falhou.</p>");
+  mostrarMensagem("<p>O pânico te paralisa. Você não tem o dinheiro. O leilão continua, e <span class='nomeickles'>Ickles</span> é vendido para outro. Você falhou. Sua única chance de sobrevivência se foi.</p>");
   document.getElementById("mercadoEscravos").style.display = "none";
   document.getElementById("mensagemCentral").style.display = "block";
 });
@@ -87,7 +87,7 @@ document.getElementById("cobrirPadrao").addEventListener("click", () => {
 });
 
 document.getElementById("negociarMercador").addEventListener("click", () => {
-  mostrarMensagem("<p>Você tenta negociar com o mercador. Ele cruza os braços e diz friamente: <em>“15 milhões, ou nada feito.”</em> Missão pendente...</p>");
+  mostrarMensagem("<p>Você se aproxima do mercador, tentando negociar um preço mais baixo. Ele te olha com desdém e ri. 'Você acha que eu vou vender este escravo por menos? Vaza, garota!'</p> <p>Você é expulsa do mercado. O leilão de <span class='nomeickles'>Ickles</span> continua, e ele é vendido para outro. Você falhou. </p>");
   document.getElementById("mercadoEscravos").style.display = "none";
   document.getElementById("mensagemCentral").style.display = "block";
 });
