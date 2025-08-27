@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Rota dos Irmãos Eckhart — Reynold</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="reynold.css" />
 </head>
 <body>
   <header>
@@ -45,7 +46,27 @@
       <button id="aceitarElogio" class="novel">Aceitar o elogio com um sorriso</button>
       <button id="respostaSarcástica" class="novel">Responder com um comentário sarcástico</button>
     </section>
-   
+   <section id="cenaTransicao" class="caixa-dialogo" style="display: none;">
+        <p>Os dias se passam desde o festival. As coisas na mansão parecem mais calmas, e a afeição de <span class="nomereynold">Reynold</span> por você continua a crescer, mas uma nova ameaça se aproxima.</p>
+        <p class="aviso-evento">Um novo evento se aproxima: A Grande Caçada Real.</p>
+        <button id="continuarCacada" class="novel">Continuar a história</button>
+    </section>
+
+    <section id="cenaCacada" class="caixa-dialogo" style="display: none;">
+        <p>A caçada real está em pleno andamento. Você se afasta do grupo principal, atraindo a atenção de um monstro selvagem. A criatura avança em sua direção, e, de repente, <span class="nomereynold">Reynold</span> surge, ficando entre você e a criatura com a espada em punho.</p>
+        <p><span class="nomereynold"><strong>Reynold:</strong></span> <em>“Eu te dou cobertura, fuja! Agora!”</em></p>
+        <button id="obedecerReynold" class="novel">Seguir a ordem e fugir</button>
+        <button id="ajudarReynold" class="novel">Tentar ajudá-lo a lutar contra o monstro</button>
+    </section>
+
+    <section id="cenaCarruagem" class="caixa-dialogo" style="display: none;">
+        <p>Depois de fugirem, vocês voltam para casa na mesma carruagem. O duque Eckart entrega um envelope com dinheiro a <span class="nomereynold">Reynold</span> para que ele se livre de qualquer evidência.</p>
+        <p><span class="nomeduque"><strong>Duque:</strong></span> <em>“Use isso para silenciar quem viu você com a Penelope na floresta. Se algum rumor vazar, culparei você.”</em></p>
+        <p><span class="nomereynold">Reynold</span> fica furioso, amassando o envelope nas mãos. Ele se vira para você e diz:</p>
+        <p><span class="nomereynold"><strong>Reynold:</strong></span> <em>“Eu sou o culpado. Não me importo se o senhor vai se livrar de mim.”</em></p>
+        <button id="defenderReynold" class="novel">Defendê-lo e assumir a culpa</button>
+        <button id="calarReynold" class="novel">Dizer para ele ficar quieto</button>
+    </section>
     <!-- GAME OVER  vaicilona -->
     <section id="gameOver" style="display: none;">
       <h2 style="color: red;">GAME OVER</h2>

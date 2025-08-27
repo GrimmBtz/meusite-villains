@@ -1,0 +1,121 @@
+
+body {
+    background-image: url('https://www.transparenttextures.com/patterns/dark-fish-skin.png');
+    background-color: #2b0000;
+    color: #f0f0f0;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #ffc820;
+    font-size: 3.8em;
+    text-shadow: 0 0 15px #da0c0c, 0 0 30px #383333;
+    letter-spacing: 3px;
+    padding-top: 40px;
+    font-weight: 700;
+}
+
+.caixa-dialogo {
+    background-color: rgba(30, 0, 0, 0.9);
+    color: #e9e9e9;
+    font-family: 'Georgia', serif;
+    border: 2px solid #5a5a5a;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 40px auto;
+    max-width: 750px;
+    box-shadow: 0 0 25px #ffc820;
+    line-height: 1.8;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.caixa-dialogo p strong {
+    color: #ffc820;
+    font-size: 1.1em;
+}
+
+.caixa-dialogo p {
+    color: #f0f0f0;
+}
+
+
+.caixa-dialogo p:not(:first-of-type) {
+    border-left: 3px solid #b30000;
+    padding-left: 10px;
+    font-style: italic;
+    color: #ffcccc; 
+}
+
+.novel {
+    margin: 12px;
+    padding: 14px 28px;
+    background-color: #fdf0f5; 
+    border: 2px solid #db7093; 
+    border-radius: 25px;
+    color: #4b0082; 
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.novel:hover {
+    background-color: #c71585;
+    border-color: #4b0082;
+    color: white;
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 6px 15px rgba(199, 21, 133, 0.6);
+}
+
+#pontosCallisto, #pontosCallistoBanquete, #pontosCacada {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffc820;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin-top: 15px;
+}
+
+
+#respostaCena, #banqueteResposta, #cacadaRespostas {
+    border: 2px solid #c93434;
+    box-shadow: 0 0 15px #c93434;
+}
+
+#respostaTexto, #respostaBanqueteTexto, #textoCacada {
+    font-style: italic;
+    color: #ffcccc;
+}
+
+
+#avancarBanquete, #avancarCacada {
+    background-color: #fdf0f5;
+    color: #4b0082;
+    border: 2px solid #db7093;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#avancarBanquete:hover, #avancarCacada:hover {
+    background-color: #c71585;
+    border-color: #4b0082;
+    color: white;
+    transform: scale(1.05);
+}
