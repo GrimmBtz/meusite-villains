@@ -1,0 +1,24 @@
+#easter-egg-penelope {
+    background: none;
+    border: none;
+    color: #222121;
+    cursor: pointer;
+    font-style: italic;
+    margin-top: 10px;
+}
+#easter-egg-penelope:hover {
+    color: #333;
+}
+
+.popup-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(252, 16, 126);
+    padding: 20px;
+    border: 2px solid #333;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 10;
+}

@@ -308,3 +308,63 @@ footer .btn {
     gap: 30px; /* Espaço entre os cards */
     justify-content: center;
 }
+.jogo-area {
+ position: relative;
+ width: 100%;
+ height: 300px;
+ border: 2px solid #8A2BE2;
+ background-color: rgba(255, 255, 255, 0.1);
+ cursor: crosshair;
+ overflow: hidden;
+ border-radius: 10px;
+ box-shadow: inset 0 0 15px rgba(138, 43, 226, 0.5);
+}
+
+/* Novo estilo para o monstro slime-galinha */
+.monstro {
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  background: radial-gradient(circle at 30% 30%, #6cf, #09f);
+  border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%;
+  box-shadow: inset 0 -8px 12px rgba(0, 0, 0, 0.3), 0 0 10px #00bfff;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  transform: scale(0);
+  z-index: 5;
+}
+
+/* "olhos" do slime */
+.monstro::before,
+.monstro::after {
+  content: '';
+  position: absolute;
+  background: white;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  top: 12px;
+}
+
+.monstro::before {
+  left: 15px;
+}
+
+.monstro::after {
+  right: 15px;
+}
+
+.monstro:hover {
+  background: radial-gradient(circle at 30% 30%, #aef, #4cf);
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00bfff, inset 0 -10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.status-jogo {
+ margin-top: 10px;
+ font-size: 1.2em;
+ color: #fff;
+ text-align: center;
+ font-family: 'Cinzel Decorative', cursive;
+}

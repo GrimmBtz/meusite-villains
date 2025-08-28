@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personagens</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="easteregg.css">
 </head>
 
 <body>
@@ -26,7 +27,22 @@
             <h2>Penelope Eckart</h2><br>
             <p>Penelope Eckhart (vítima original do mundo do jogo) Frio, pragmático e até rude inicialmente — moldada
                 por sua infância abusiva no Ducado Eckhart. tenho que estudar mais sobre ela</p>
-        </div>
+        <button id="easter-egg-penelope">Toque aqui para ver a verdadeira vilã...</button>
+<div id="popup-penelope" class="popup-box">
+    <p>Por trás da fachada de fragilidade e da história comovente de ser a filha perdida da família Eckhart, Yvonne Eckhart é a mente por trás de muitos dos infortúnios de Penelope. Ela não é uma vítima, mas sim a predadora que manipula os homens e as circunstâncias para retomar seu "final feliz" 
+    "Estou aqui apenas para sobreviver... Se eu não conseguir a afeição de um deles, o único final que me espera é a morte."</p>
+    <button onclick="fecharPopup('popup-penelope')">Fechar</button>
+</div>
+<script>
+    document.getElementById('easter-egg-penelope').addEventListener('click', function() {
+        document.getElementById('popup-penelope').style.display = 'block';
+    });
+
+    function fecharPopup(id) {
+        document.getElementById(id).style.display = 'none';
+    }
+</script>
+            </div>
         <div class="card">
             <img src="image copy 2.png" alt="Eckles">
             <h2>Eckles </h2><br>
