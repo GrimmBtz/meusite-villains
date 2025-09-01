@@ -1,0 +1,127 @@
+/* Easter Eggs Styles - Discretos */
+.easter-egg {
+    position: fixed;
+    z-index: 1000;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    opacity: 0.2;
+}
+
+.easter-egg:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+#vinter-rabbit {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 50px;
+}
+
+#penelope-secret {
+    top: 90px;       /* Posição vertical */
+    left: 15px;      /* Posição horizontal */
+    width: 30px;     /* Largura do container */
+    height: 30px;    /* Altura do container */
+    opacity: 0.15;
+}
+
+.secret-message {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    color: #ffd700;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #6a0dad;
+    max-width: 280px;
+    z-index: 1001;
+    display: none;
+    font-family: 'Times New Roman', serif;
+    box-shadow: 0 0 10px rgba(106, 13, 173, 0.5);
+    font-size: 14px;
+    text-align: center;
+    backdrop-filter: blur(2px);
+}
+
+.rabbit-ear {
+    position: absolute;
+    background: #6a0dad;
+    border-radius: 50%;
+    width: 15px;
+    height: 25px;
+}
+
+.rabbit-ear.left {
+    top: -12px;
+    left: 7px;
+    transform: rotate(-20deg);
+}
+
+.rabbit-ear.right {
+    top: -12px;
+    right: 7px;
+    transform: rotate(20deg);
+}
+
+.rabbit-face {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #6a0dad;
+    border-radius: 50%;
+    top: 5px;
+}
+
+.rabbit-eye {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    top: 15px;
+}
+
+.rabbit-eye.left {
+    left: 10px;
+}
+
+.rabbit-eye.right {
+    right: 10px;
+}
+
+.rabbit-nose {
+    position: absolute;
+    width: 8px;
+    height: 5px;
+    background: pink;
+    border-radius: 50%;
+    top: 25px;
+    left: 16px;
+}
+
+
+.penelope-symbol {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    background-image: url('image\ copy\ 6.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+@keyframes subtle-pulse {
+    0% { opacity: 0.15; }
+    50% { opacity: 0.25; }
+    100% { opacity: 0.15; }
+}
+
+.easter-egg {
+    animation: subtle-pulse 8s infinite;
+}
+
+.easter-egg:hover {
+    animation: none;
+}

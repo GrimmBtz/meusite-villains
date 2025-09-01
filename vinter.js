@@ -116,3 +116,34 @@ function atualizarPontos(valor) {
     // O texto será exibido no elemento com id="pontosVinter"
     document.getElementById("pontosVinter").textContent = `Afeição Vinter: ${afeicaoVinter}`;
 }
+// Adicione esta função ao seu vinter.js para melhor integração
+function atualizarEasterEggs(pontos) {
+    // Revelar easter eggs conforme progresso
+    if (pontos >= 20) {
+        document.getElementById('penelope-secret').style.opacity = '0.25';
+    }
+    
+    if (pontos >= 40) {
+        document.getElementById('vinter-rabbit').style.opacity = '0.3';
+    }
+    
+    // Easter egg especial em 50 pontos
+    if (pontos === 50) {
+        const messageElement = document.getElementById('secret-message');
+        if (messageElement) {
+            messageElement.textContent = "Parabéns! Você alcançou o coração de Vinter. 'Eu não me importo se o mundo me odeia, contanto que você esteja ao meu lado.'";
+            messageElement.style.display = 'block';
+            setTimeout(() => {
+                messageElement.style.display = 'none';
+            }, 7000);
+        }
+    }
+}
+
+// Modifique sua função de atualizar pontos para incluir:
+function atualizarPontos(novosPontos) {
+    // Sua lógica existente aqui...
+    
+    // Adicione esta linha:
+    atualizarEasterEggs(novosPontos);
+}
