@@ -10,6 +10,9 @@
   <header>
     <h1>Rota de Reynold Eckhart</h1>
     <p>Villains Are Destined to Die</p>
+    <div class="progresso-container">
+      <div class="progresso-bar" id="progressoBar"></div>
+    </div>
   </header>
 
   <div class="historia-container">
@@ -24,7 +27,7 @@
     </section>
 
     <!-- CENA 2: Fuga pela Janela -->
-    <section id="fugaCena" class="caixa-dialogo hidden" style="display: none" >
+    <section id="fugaCena" class="caixa-dialogo hidden">
       <p><span class="nome-penelope">Penelope</span> decide fugir à noite para ir ao Festival. Você amarra cortinas para fazer uma corda e desce pela janela...</p>
       <p>Mas a corda é curta demais! Você fica pendurada, hesitando em pular, quando de repente <span class="nomereynold">Reynold</span> aparece na janela logo abaixo.</p>
       <p><span class="nomereynold"><strong>Reynold:</strong></span> <em>"O que você acha que está fazendo? Brincando de princesa em apuros? Pula, eu te seguro!"</em></p>
@@ -34,7 +37,7 @@
     </section>
 
     <!-- CENA 3: Festival - Desafio -->
-    <section id="cenaDesafio" class="caixa-dialogo hidden" style="display: none">
+    <section id="cenaDesafio" class="caixa-dialogo hidden">
       <p>O festival está em plena agitação quando <span class="nomereynold">Reynold</span> avista uma barraca de tiro ao alvo. Um sorriso competitivo surge em seu rosto.</p>
       <p><span class="nomereynold"><strong>Reynold:</strong></span> <em>"Aposto que consigo acertar todos os alvos de primeira. Quer tentar também? Se ganhar, te dou um prêmio."</em></p>
       <p class="citacao">"Esta cena mostra o lado mais descontraído de Reynold, longe das pressões da mansão dos Eckhart."</p>
@@ -43,91 +46,102 @@
     </section>
 
     <!-- CENA 4: Momento de Conexão -->
-    <section id="cenaAparte" class="caixa-dialogo hidden" style="display: none">
+    <section id="cenaAparte" class="caixa-dialogo hidden">
       <p>Vocês se afastam da multidão barulhenta. <span class="nomereynold">Reynold</span> tira um doce de seu bolso e o estende para você com um gesto um tanto desajeitado.</p>
-      <p><span class="nomereynold"><strong>Reynold:</strong></span> <em>"Você... não é tão irritante quanto eu pensava que seria. Na verdade, até que é tolerável. Não diga a ninguém que eu disse isso."</em></p>
-      <p class="citacao">"Este momento marca uma virada no relacionamento deles - a primeira vez que Reynold admite que seus sentimentos estão mudando."</p>
+      <p><span class="nomereynold"><strong>Reynold:</strong></span> <em>"Você... não é tão irritante quanto eu pensava que seria. Para uma irmã, até que é tolerável. Não diga a ninguém que eu disse isso."</em></p>
+      <p class="citacao">"Este momento marca uma virada no relacionamento deles - a primeira vez que Reynold admite que pode aceitá-la como irmã."</p>
       <button id="aceitarElogio" class="novel">Aceitar o doce e agradecer</button>
       <button id="respostaSarcastica" class="novel">Responder com sarcasmo - velhos hábitos</button>
     </section>
 
     <!-- CENA 5: Transição para a Caçada -->
-    <section id="cenaTransicao" class="caixa-dialogo hidden" style="display: none">
-      <p>Os dias se passam desde o festival. As coisas na mansão parecem mais calmas, e a afeição de <span class="nomereynold">Reynold</span> por você continua a crescer, mas uma nova ameaça se aproxima.</p>
+    <section id="cenaTransicao" class="caixa-dialogo hidden">
+      <p>Os dias se passam desde o festival. As coisas na mansão parecem mais calmas, e o respeito de <span class="nomereynold">Reynold</span> por você continua a crescer, mas uma nova ameaça se aproxima.</p>
       <p class="aviso-evento">Um novo evento se aproxima: A Grande Caçada Real.</p>
       <p class="citacao">"A Caçada Real é um evento crucial no manhwa, onde muitos segredos são revelados e relacionamentos são testados."</p>
       <button id="continuarCacada" class="novel">Continuar para a Caçada Real</button>
     </section>
 
     <!-- CENA 6: A Caçada -->
-    <section id="cenaCacada" class="caixa-dialogo hidden" style="display: none">
+    <section id="cenaCacada" class="caixa-dialogo hidden">
       <p>A caçada real está em pleno andamento. Você se afasta do grupo principal, atraindo a atenção de um javali selvagem. A criatura avança em sua direção, e, de repente, <span class="nomereynold">Reynold</span> surge, colocando-se entre você e a fera com sua espada em punho.</p>
-      <p><span class="nomereynold"><strong>Reynold:</strong></span> <em>"Fuja! Agora! Eu seguro ele!"</em></p>
-      <p class="citacao">"Este momento de proteção instintiva mostra o quanto Reynold já se importa com Penelope, mesmo relutante em admitir."</p>
+      <p><span class="nomereynold"><strong>Reynold:</strong></span> <em>"Fuja! Agora! Eu seguro ele! Você é minha irmã, não vou deixar nada acontecer com você!"</em></p>
+      <p class="citacao">"Este momento de proteção instintiva mostra o quanto Reynold já se importa com Penelope como irmã, mesmo relutante em admitir."</p>
       <button id="obedecerReynold" class="novel">Seguir a ordem e fugir</button>
       <button id="ajudarReynold" class="novel">Tentar ajudá-lo a lutar</button>
     </section>
 
     <!-- CENA 7: Consequências na Carruagem -->
-    <section id="cenaCarruagem" class="caixa-dialogo hidden" style="display: none">
+    <section id="cenaCarruagem" class="caixa-dialogo hidden">
       <p>Depois do incidente, vocês voltam para casa na mesma carruagem. O duque Eckart entrega um envelope com dinheiro a <span class="nomereynold">Reynold</span>.</p>
       <p><span class="nomeduque"><strong>Duque Eckart:</strong></span> <em>"Use isso para silenciar qualquer testemunha que possa ter visto você com a Penelope na floresta. Se algum rumor escapar, a responsabilidade será sua."</em></p>
       <p><span class="nomereynold">Reynold</span> fica furioso, amassando o envelope em suas mãos. Ele se vira para o Duque:</p>
-      <p><span class="nomereynold"><strong>Reynold:</strong></span> <em>"Eu sou o culpado pelo que aconteceu. Não me importo se o senhor decidir me deserdar."</em></p>
+      <p><span class="nomereynold"><strong>Reynold:</strong></span> <em>"Ela é minha irmã! Eu sou o culpado pelo que aconteceu. Não me importo se o senhor decidir me deserdar."</em></p>
       <p class="citacao">"Esta rebelião contra o Duque marca um ponto de virada crucial no arco de desenvolvimento de Reynold."</p>
       <button id="defenderReynold" class="novel">Defendê-lo e assumir parte da culpa</button>
       <button id="calarReynold" class="novel">Pedir para ele ficar quieto</button>
     </section>
 
     <!-- CENA 8: Confronto Final -->
-    <section id="cenaConfronto" class="caixa-dialogo hidden" style="display: none">
+    <section id="cenaConfronto" class="caixa-dialogo hidden">
       <p>De volta à mansão, <span class="nomereynold">Reynold</span> procura você em seus aposentos. Seu rosto está sério, mas seus olhos mostram determinação.</p>
-      <p><span class="nomereynold"><strong>Reynold:</strong></span> <em>"Tudo isso... tudo que aconteceu... fez eu perceber que não me importo mais com o que meu pai pensa. Eu me importo é com você."</em></p>
-      <p><span class="nomereynold"><strong>Reynold:</strong></span> <em>"Você me mostrou que existem coisas mais importantes do que honra familial e aparências. E eu... eu quero protegê-la, não porque é meu dever, mas porque eu quero."</em></p>
-      <p class="citacao">"Esta confissão é um dos momentos mais significativos na rota do Reynold, mostrando seu amadurecimento emocional."</p>
-      <button id="aceitarConfissao" class="novel">Aceitar seus sentimentos</button>
+      <p><span class="nomereynold"><strong>Reynold:</strong></span> <em>"Tudo isso... tudo que aconteceu... fez eu perceber que não me importo mais com o que meu pai pensa. Você é minha irmã, e eu devo protegê-la."</em></p>
+      <p><span class="nomereynold"><strong>Reynold:</strong></span> <em>"Você me mostrou que existem coisas mais importantes do que honra familial e aparências. E eu... eu quero protegê-la, não porque é meu dever, mas porque você é minha irmã."</em></p>
+      <p class="citacao">"Esta confissão é um dos momentos mais significativos na rota do Reynold, mostrando seu amadurecimento como irmão."</p>
+      <button id="aceitarConfissao" class="novel">Aceitar sua proteção como irmão</button>
       <button id="negarConfissao" class="novel">Duvidar de suas intenções</button>
+    </section>
+
+    <!-- CENA 9: Continuação - O Presente de Irmão -->
+    <section id="cenaPresente" class="caixa-dialogo hidden">
+      <p>Alguns dias após a confissão, <span class="nomereynold">Reynold</span> aparece em sua porta com uma pequena caixa em suas mãos. Ele parece nervoso, algo incomum para ele.</p>
+      <p><span class="nomereynold"><strong>Reynold:</strong></span> <em>"Eu... eu queria te dar isso. É um pingente de proteção. Todos os irmãos Eckhart têm um. Agora você também."</em></p>
+      <p>Ele abre a caixa para revelar um delicado pingente de prata com o brasão da família Eckhart.</p>
+      <p class="citacao">"Este presente simboliza a verdadeira aceitação de Reynold de Penelope como parte da família."</p>
+      <button id="aceitarPresente" class="novel">Aceitar o presente com gratidão</button>
+      <button id="recusarPresente" class="novel">Recusar gentilmente</button>
+    </section>
+
+    <!-- CENA 10: Continuação - O Baile Familiar -->
+    <section id="cenaBaile" class="caixa-dialogo hidden">
+      <p>Um grande baile está sendo realizado na mansão Eckhart. <span class="nomereynold">Reynold</span>, vestindo um traje formal, se aproxima de você com determinação.</p>
+      <p><span class="nomereynold"><strong>Reynold:</strong></span> <em>"Como seu irmão, é meu dever apresentá-la formalmente à sociedade. Gostaria de dançar comigo? Precisamos mostrar a todos que você é uma Eckhart."</em></p>
+      <p>Os olhos dele estão sérios, mas você pode ver o orgulho familial por trás deles.</p>
+      <p class="citacao">"O baile é um momento crucial para demonstrar publicamente a aceitação de Penelope como membro da família Eckhart."</p>
+      <button id="aceitarDanca" class="novel">Aceitar a dança</button>
+      <button id="recusarDanca" class="novel">Recusar - não está preparada</button>
     </section>
 
     <!-- FINAIS -->
     <!-- Final Ruim -->
-    <section id="finalRuim" class="final hidden" style="display: none">
+    <section id="finalRuim" class="final hidden">
       <h2>Fim Trágico</h2>
-      <p>Reynold, ferido por sua rejeição contínua, afasta-se para sempre. Ele aceita um posto em terras distantes, deixando para trás qualquer esperança de reconciliação.</p>
-      <p class="citacao">"Às vezes, as oportunidades perdidas nunca retornam. Reynold parte levando consigo um coração partido e o arrependimento do que poderia ter sido."</p>
+      <p>Reynold, ferido por sua rejeição contínua, afasta-se para sempre. Ele aceita um posto em terras distantes, deixando para trás qualquer esperança de reconciliação fraternal.</p>
+      <p class="citacao">"Às vezes, as oportunidades perdidas nunca retornam. Reynold parte levando consigo o arrependimento do relacionamento fraternal que poderia ter sido."</p><br><br>
       <a href="irmaos.html" class="btn">Voltar para a página dos irmãos</a>
       <a href="javascript:location.reload()" class="btn">Tentar novamente</a>
     </section>
 
     <!-- Final Normal -->
-    <section id="finalNormal" class="final hidden" style="display: none">
-      <h2>Reconciliação</h2>
-      <p>Você e Reynold encontram um terreno comum. Embora não seja um conto de fadas, há respeito e afeto genuíno entre vocês. Ele promete ser seu aliado na corte, oferecendo proteção e lealdade.</p>
-      <p class="citacao">"Nem todos os finais precisam ser perfeitos para serem satisfatórios. Às vezes, uma trégua pacífica é a vitória mais realista que se pode esperar."</p>
+    <section id="finalNormal" class="final hidden">
+      <h2>Reconciliação Fraternal</h2>
+      <p>Você e Reynold encontram um terreno comum. Embora não seja perfeito, há respeito e lealdade fraternal entre vocês. Ele promete ser seu protetor e aliado na corte.</p>
+      <p class="citacao">"Nem todos os finais precisam ser perfeitos para serem satisfatórios. Às vezes, uma relação fraternal pacífica é a vitória mais realista."</p><br><br>
       <a href="irmaos.html" class="btn">Voltar para a página dos irmãos</a>
       <a href="javascript:location.reload()" class="btn">Tentar novamente</a>
     </section>
 
     <!-- Final Bom -->
-    <section id="finalBom" class="final hidden" style="display: none">
-      <h2>Verdadeiro Final: Aceitação Mútua</h2>
-      <p>Reynold supera suas inseguranças e preconceitos, confessando seus sentimentos genuínos. Você aceita sua proteção não como uma obrigação, mas como uma escolha mútua. Juntos, vocês enfrentam as conspirações da corte, formando um vínculo inquebrável baseado em confiança e respeito.</p>
-      <p class="citacao">"O amor verdadeiro não é sobre perfeição, mas sobre aceitar as imperfeições um do outro e escolher ficar juntos apesar delas."</p>
-      <a href="irmaos.html" class="btn">Voltar para a página dos irmãos</a>
-      <a href="javascript:location.reload()" class="btn">Reviver a história</a>
-    </section>
-
-    <!-- Final Secreto (Afeto muito alto) -->
-    <section id="finalSecreto" class="final hidden" style="display: none">
-      <h2>Final Secreto: Eternamente Seu</h2>
-      <p>Reynold renuncia publicamente à herança dos Eckhart para ficar ao seu lado, provando que seu amor supera qualquer ambição ou obrigação familiar. Em uma cerimônia íntima, vocês trocam promessas, não como nobres, mas como duas almas que finalmente se encontraram.</p>
-      <p class="citacao">"O maior ato de love não é possuir, mas libertar. E naquela liberdade, Reynold encontrou sua verdadeira razão de viver."</p>
+    <section id="finalBom" class="final hidden">
+      <h2>Verdadeiro Final: Irmãos Unidos</h2>
+      <p>Reynold supera suas inseguranças e preconceitos, aceitando você completamente como irmã. Juntos, vocês enfrentam as conspirações da corte, formando um vínculo fraternal inquebrável baseado em confiança e respeito mútuo.</p>
+      <p class="citacao">"Laços familiares verdadeiros não são sobre sangue, mas sobre escolher estar lá um para o outro, não importa o que aconteça."</p><br><br>
       <a href="irmaos.html" class="btn">Voltar para a página dos irmãos</a>
       <a href="javascript:location.reload()" class="btn">Reviver a história</a>
     </section>
 
     <!-- Game Over -->
-    <section id="gameOver" class="game-over hidden" style="display: none">
+    <section id="gameOver" class="game-over hidden">
       <h2>GAME OVER</h2>
       <p id="gameOverTexto"></p>
       <a href="javascript:location.reload()" class="btn">Tentar novamente</a>
@@ -135,7 +149,7 @@
     </section>
 
     <div id="mensagemResultado" class="caixa-dialogo hidden"></div>
-    <p id="pontosReynold">Afeição de Reynold: 0</p>
+    <p id="pontosReynold">Aprovação de Reynold: 0</p>
   </div>
 
   <footer>
