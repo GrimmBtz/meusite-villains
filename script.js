@@ -44,12 +44,12 @@ document.addEventListener("DOMContentLoaded", function () {
         pontosCallistoDisplay.innerText = "Afeição Callisto Regulus: " + pontosCallisto;
     }
 
-    // Função para mostrar resposta
+
     function mostrarMensagem(texto) {
         respostaEscolha.innerHTML = texto;
     }
 
-    // Eventos dos botões
+ 
     document.getElementById("botaoAceitar").addEventListener("click", () => {
         mostrarMensagem('<p class="nome-penelope">Penelope:</p><p><em>\'Você chama isso de comida...? Não brinque comigo!! isso são só restos! que nojo.\'</em></p><p>Mas, mesmo pensando nisso, Penelope continua comendo. No mesmo momento, entra <span class="nomereynold">Renold Eckhart</span>, o segundo filho da casa. Ele pergunta se está tudo bem, e quando percebe a comida estragada, repreende a empregada: <em>\'Como se atreve a zombar dela dessa forma?\'</em>, a punindo em seguida. Você continua a salvo por enquanto. <strong class="nome-sistema">ESPERA UM POUCO, VAMOS TE MANDAR PARA A PRÓXIMA PÁGINA OU CLIQUE NO BOTÃO ABAIXO</strong></p>');
         setTimeout(() => {
@@ -70,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
         atualizarPontos();
     });
 
-    // Atualiza os pontos inicialmente
     atualizarPontos();
 });
 botaoAceitar.addEventListener("click", function () {

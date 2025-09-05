@@ -1,98 +1,258 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Villains Are Destined to Die - Festival de Caça</title>
-<link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="kakalisto.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Villains Are Destined to Die - Festival de Caça</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="kakalisto.css"/>
+    <link rel="stylesheet" href="callisto.css"/>
 </head>
 <body>
-<header>
-   <h1>Villains Are Destined to Die - Festival de Caça</h1>
-</header>
+    <header>
+        <h1>Villains Are Destined to Die - Festival de Caça</h1>
+    </header>
 
-<main class="caixa-dialogo">
-     <section id="inicioFloresta" class="caixa-dialogo-content">
-      <p>
-        A floresta ecoa com o som de criaturas explodindo. Seus irmãos, por razões óbvias, desapareceram. Quando você se vê encurralada, uma espada dourada corta o ar com a força de um furacão. <strong class="nomecallisto">Callisto Regulus</strong>, o Príncipe Herdeiro louco, surge como um sol maligno, matando os monstros com uma precisão fria.
-      </p>
-      <p><strong class="nomecallisto">Callisto:</strong> “Esses são os Guardiões do Festival de Caça, Eckhart? Que piada.”</p>
-      <div class="opcoes-dialogo">
-        <button id="resposta1" class="novel">“Eu não pedi para ser salva.”</button>
-        <button id="resposta2" class="novel">“Você... me salvou?”</button>
-        <button id="resposta3" class="novel">(Ficar em silêncio)</button>
-      </div>
-  </section>
+    <main>
+        <section id="inicioFloresta" class="caixa-dialogo" style="display: block;">
+            <p>
+                A floresta ecoa com o som de criaturas explodindo. Seus irmãos, por razões óbvias, desapareceram. Quando você se vê encurralada, uma espada dourada corta o ar com a força de um furacão. <strong class="nomecallisto">Callisto Regulus</strong>, o Príncipe Herdeiro louco, surge como um sol maligno, matando os monstros com uma precisão fria.
+            </p>
+            <p><strong class="nomecallisto">Callisto:</strong> “Esses são os Guardiões do Festival de Caça, Eckhart? Que piada.”</p>
+            <div class="opcoes-dialogo">
+                <button id="resposta1" class="novel">“Eu não pedi para ser salva.”</button>
+                <button id="resposta2" class="novel">“Você... me salvou?”</button>
+                <button id="resposta3" class="novel">(Ficar em silêncio)</button>
+            </div>
+        </section>
 
-     <section id="respostaCena" class="caixa-dialogo-content" style="display:none;">
-      <p id="respostaTexto"></p>
-      <p id="pontosCallisto" class="resposta">Afeição Callisto: 0</p>
-  </section>
+        <section id="respostaCena" class="caixa-dialogo" style="display:none;">
+            <p id="respostaTexto"></p>
+            <p id="pontosCallisto" class="resposta">Afeição Callisto: 0</p>
+        </section>
 
-     <section id="callistoConfronto" class="caixa-dialogo-content" style="display:none;">
-      <p><strong class="nomecallisto">Callisto:</strong> “Seus irmãos fugiram e te deixaram aqui para morrer. E dizem que eu sou o monstro.”</p>
-      <div class="opcoes-dialogo">
-        <button id="resposta4" class="novel">“Eles não me abandonaram. Estavam ocupados...”</button>
-        <button id="resposta5" class="novel">“Você está certo. Eles nunca se importaram.”</button>
-        <button id="resposta6" class="novel">(Evitar olhar nos olhos dele)</button>
-      </div>
-  </section>
-  
-     <section id="missaoIntroducao" class="caixa-dialogo-content" style="display:none;">
-      <p>O chão treme. Magos de túnicas escuras surgem. Um deles grita: <strong class="nomemago">“MORRA, FILHO DA CONCUBINA DA DEUSA!”</strong> Eles não estão atrás de você, estão atrás de <strong class="nomecallisto">Callisto</strong>. Em meio à confusão, você vê <strong class="nomederick">Derrick</strong> ajudando uma mulher figurante.</p>
-      <p><strong class="nomecallisto">Callisto:</strong> <span class="monologo">“Seu querido irmão parece mais interessado na segurança de uma mulher que ele nunca conheceu do que na de sua única irmã. E se eu fosse ele, eu nunca a deixaria sozinha com o homem que quase a matou.”</span></p>
-      <p class="nome-penelope"><strong>Penelope:</strong> <em>(Isso é algo para se brincar/zoar?)</em></p>
-      <p><strong class="nomecallisto">Callisto:</strong> <span class="monologo">"Estou só brincando, então anime-se, minha senhora... Como se eu fosse usá-la como isca, só por causa da nossa conversa recente."</span></p>
-      <p>Um dos monstros cortados por <strong class="nomecallisto">Callisto</strong> se multiplica. São **Slime-galinhas**, criaturas que se dividem ao serem feridas. <strong class="nomereynold">Rennald</strong>, com uma expressão de pânico, grita: <strong class="nomereynold">"PENELOPE, CORRA DAÍ!"</strong></p>
-      <p class="nome-sistema">SISTEMA - Episódio Principal: Torne-se a Rainha da Caçada! <strong>[Escolha sua Missão!]</strong></p>
-      <div class="opcoes-dialogo">
-        <!-- Aqui está a alteração que pediu -->
-        <button id="btnFugirMissao" class="novel">Fugir da missão</button>
-        <button id="btnAceitarMissao2" class="novel">Missão 2: **[Salve as Pessoas do Perigo!]** (Recompensa: Reputação ▲50, Todos os interesses amorosos ▲5%)</button>
-      </div>
-  </section>
+        <section id="callistoConfronto" class="caixa-dialogo" style="display:none;">
+            <p><strong class="nomecallisto">Callisto:</strong> “Seus irmãos fugiram e te deixaram aqui para morrer. E dizem que eu sou o monstro.”</p>
+            <div class="opcoes-dialogo">
+                <button id="resposta4" class="novel">“Eles não me abandonaram. Estavam ocupados...”</button>
+                <button id="resposta5" class="novel">“Você está certo. Eles nunca se importaram.”</button>
+                <button id="resposta6" class="novel">(Evitar olhar nos olhos dele)</button>
+            </div>
+        </section>
 
-     <section id="missaoAlternativa" class="caixa-dialogo-content" style="display:none;">
-      <h2>Missão 2: Salve as Pessoas do Perigo!</h2>
-      <p>Você precisa destruir **TODOS** os monstros em um tempo limite, protegendo os outros. O tempo é mais curto e o desafio é maior.</p>
-       
-      <div class="jogo-area" id="jogoArea2">
-        <div class="monstro" id="monstroA"></div>
-        <div class="monstro" id="monstroB"></div>
-        <div class="monstro" id="monstroC"></div>
-        <div class="monstro" id="monstroD"></div>
-        <div class="monstro" id="monstroE"></div>
-        <div class="monstro" id="monstroF"></div>
-        <div class="monstro" id="monstroG"></div>
-        <div class="monstro" id="monstroH"></div>
-        <div class="monstro" id="monstroI"></div>
-        <div class="monstro" id="monstroJ"></div>
-      </div>
-       
-      <div class="status-jogo">
-        <p>Monstros restantes: <span id="monstrosRestantes2"></span></p>
-        <p>Tempo: <span id="tempoRestante2"></span>s</p>
-      </div>
-  </section>
+        <section id="missaoIntroducao" class="caixa-dialogo" style="display:none;">
+            <p>O chão treme. Magos de túnicas escuras surgem. Um deles grita: <strong class="nomemago">“MORRA, FILHO DA CONCUBINA DA DEUSA!”</strong> Eles não estão atrás de você, estão atrás de <strong class="nomecallisto">Callisto</strong>. Em meio à confusão, você vê <strong class="nomederick">Derrick</strong> ajudando uma mulher figurante.</p>
+            <p><strong class="nomecallisto">Callisto:</strong> <span class="monologo">“Seu querido irmão parece mais interessado na segurança de uma mulher que ele nunca conheceu do que na de sua única irmã. E se eu fosse ele, eu nunca a deixaria sozinha com o homem que quase a matou.”</span></p>
+            <p class="nome-penelope"><strong>Penelope:</strong> <em>(Isso é algo para se brincar/zoar?)</em></p>
+            <p><strong class="nomecallisto">Callisto:</strong> <span class="monologo">"Estou só brincando, então anime-se, minha senhora... Como se eu fosse usá-la como isca, só por causa da nossa conversa recente."</span></p>
+            <p>Um dos monstros cortados por <strong class="nomecallisto">Callisto</strong> se multiplica. São **Slime-galinhas**, criaturas que se dividem ao serem feridas. <strong class="nomereynold">Rennald</strong>, com uma expressão de pânico, grita: <strong class="nomereynold">"PENELOPE, CORRA DAÍ!"</strong></p>
+            <p class="nome-sistema">SISTEMA - Episódio Principal: Torne-se a Rainha da Caçada! <strong>[Escolha sua Missão!]</strong></p>
+            <div class="opcoes-dialogo">
+                <button id="btnFugirMissao" class="novel">Fugir da missão</button>
+                <button id="btnAceitarMissao2" class="novel">Missão 2: **[Salve as Pessoas do Perigo!]** (Recompensa: Reputação ▲50, Todos os interesses amorosos ▲5%)</button>
+            </div>
+        </section>
 
-     <section id="missaoResultado2" class="caixa-dialogo" style="display:none;">
-      <h2 id="resultadoTitulo2"></h2>
-      <p id="resultadoTexto2"></p>
-      <button id="avancarHistoria2" class="novel">Continuar a história</button>
-  </section>
+        <section id="missaoAlternativa" class="caixa-dialogo" style="display:none;">
+            <h2>sistema
+                Episódio principal:
+                Seja a rainha da caça!
+                - Primeira missão -
+                Salvar as pessoas do perigo!
+                Gostaria de continuar?
+                (Recompensa: fama 50. Interesse 5%)</h2>
+            <p>Você precisa destruir **TODOS** os monstros em um tempo limite, protegendo os outros. O tempo é mais curto e o desafio é maior.</p>
+            
+            <div class="jogo-area" id="jogoArea2">
+                <div class="monstro" id="monstroA"></div>
+                <div class="monstro" id="monstroB"></div>
+                <div class="monstro" id="monstroC"></div>
+                <div class="monstro" id="monstroD"></div>
+                <div class="monstro" id="monstroE"></div>
+                <div class="monstro" id="monstroF"></div>
+                <div class="monstro" id="monstroG"></div>
+                <div class="monstro" id="monstroH"></div>
+                <div class="monstro" id="monstroI"></div>
+                <div class="monstro" id="monstroJ"></div>
+            </div>
+            
+            <div class="status-jogo">
+                <p>Monstros restantes: <span id="monstrosRestantes2"></span></p>
+                <p>Tempo: <span id="tempoRestante2"></span>s</p>
+            </div>
+        </section>
 
-     <section id="gameOver" class="caixa-dialogo-content" style="display:none;">
-      <h2>GAME OVER</h2>
-      <p>Você tentou fugir da missão, mas acabou se machucando fatalmente.</p>
-      <button id="reiniciar" class="novel">Reiniciar</button>
-  </section>
-</main>
+        <section id="missaoResultado2" class="caixa-dialogo" style="display:none;">
+            <h2 id="resultadoTitulo2"></h2>
+            <p id="resultadoTexto2"></p>
+            <button id="avancarHistoria2" class="novel">Continuar a história</button>
+        </section>
 
-<footer>
-   <p>Minha vida está cheia de finais ruins, mas se você estiver ao meu lado, eu farei o impossível para ter um final feliz!</p>
-</footer>
+        <section id="amuletoExtra" class="caixa-dialogo" style="display:none;">
+            <p>Você está com três amuletos: um para o Duque, um para Emily e um extra para emergências.</p>
+            <p>De repente, <strong class="nomecallisto">Callisto</strong> aparece, com um olhar intenso.</p>
+            <p><strong class="nomecallisto">Callisto:</strong> <em>"Para quem são esses presentes?"</em></p>
+            <div class="opcoes-dialogo">
+                <button id="dizerVerdadeAmuletos" class="novel">Explicar a verdade sobre os amuletos</button>
+                <button id="darAmuletoCallisto" class="novel">Dar o amuleto extra para Callisto</button>
+                <button id="mentirAmuletos" class="novel">Mentir sobre os amuletos</button>
+            </div>
+        </section>
 
-<script src="callisto3.js"></script>
+        <section id="caçaFeminina" class="caixa-dialogo" style="display:none;">
+            <p>Decidida a provar para Ickles que sua mestra é incrível, você vai para a área de caça feminina.</p>
+            <p>Tenta caçar pequenos animais, mas acaba sentindo pena deles.</p>
+            <p>Então avista uma raposa bonita e tenta caçá-la, mas ela foge em direção à...</p>
+            <div class="opcoes-dialogo">
+                <button id="seguirRaposa" class="novel">Seguir a raposa</button>
+                <button id="voltarSeguro" class="novel">Voltar para área segura</button>
+            </div>
+        </section>
+
+        <section id="zonaDourada" class="caixa-dialogo" style="display:none;">
+            <p>Sem perceber, você entrou na Zona Dourada - onde ficam os animais mais perigosos de todos os reinos!</p>
+            <p>De repente, um urso gigantesco surge à sua frente!</p>
+            <p class="nome-sistema">SISTEMA: MISSÃO REPENTINA! {APARECEU UM URSO SELVAGEM GIGANTE!} CACE O URSO PARA SE TORNAR A RAINHA DO TORNEIO. RECOMPENSA: PELE DE URSO GIGANTE. VESICULA DE URSO GIGANTE, REPUTAÇÃO +50. PONTOS DE AFETO DE ??? +5%.</p>
+            <div class="opcoes-dialogo">
+                <button id="aceitarMissaoUrso" class="novel">Aceitar a missão (30 segundos)</button>
+            </div>
+        </section>
+
+        <section id="minijogoUrso" class="caixa-dialogo" style="display:none;">
+            <h3>Caça ao Urso Gigante!</h3>
+            <p>Acerto os pontos vermelhos no urso dentro do tempo limite!</p>
+            <div class="status-jogo">
+                <p>Pontos acertados: <span id="pontosAcertados">0</span>/3</p>
+                <p>Tempo: <span id="tempoUrso">30</span>s</p>
+            </div>
+            <div class="jogo-area" id="areaUrso">
+                </div>
+        </section>
+
+        <section id="resgateUrso" class="caixa-dialogo" style="display:none;">
+            <p>Faltando poucos segundos, você ouve uma voz familiar:</p>
+            <p><strong class="nomecallisto">Callisto:</strong> <em>"ABAIXE-SE!"</em></p>
+            <p>Callisto salva você do urso com sua espada.</p>
+            <p><strong class="nomecallisto">Callisto:</strong> <em>"QUE DEMÔNIOS VOCÊ ESTÁ FAZENDO AQUI? TE CHAMAM DE CADELA LOUCA, MAS NÃO PENSEI QUE ERA REALMENTE INSANA. Realmente tentou pegar esse urso sozinha?"</em></p>
+            <p class="nome-sistema">SISTEMA: EPISÓDIO PRINCIPAL {APARECEU UM URSO SELVAGEM GIGANTE!] MISSÃO NÃO CONCLUÍDA! COMO VOCÊ EXCEDEU O TEMPO LIMITE, KALLISTO APARECEU.</p>
+            <div class="opcoes-dialogo">
+                <button id="responderCallistoUrso" class="novel">Responder a Callisto</button>
+            </div>
+        </section>
+
+        <section id="presenteUrso" class="caixa-dialogo" style="display:none;">
+            <p>Callisto corta a cabeça do urso e a entrega para você.</p>
+            <p><strong class="nomecallisto">Callisto:</strong> <em>"POR QUE ESTÁ ME OLHANDO COM UMA CARA TÃO ESTÚPIDA? O QUE FOI? SE APAIXONOU DE NOVO?"</em></p>
+            <p>Ele explica que é sua recompensa por salvar as pessoas no banquete do festival de caça.</p>
+            <div class="opcoes-dialogo">
+                <button id="aceitarPresente" class="novel">Aceitar o presente</button>
+                <button id="recusarPresente" class="novel">Recusar o presente</button>
+            </div>
+        </section>
+
+        <section id="cenaChuva" class="caixa-dialogo" style="display:none;">
+            <p>Começa a chover. Callisto oferece seu casaco para você.</p>
+            <p><strong class="nomecallisto">Callisto:</strong> <em>"Aqui, use isso antes que pegue um resfriado."</em></p>
+            <div class="opcoes-dialogo">
+                <button id="aceitarCasaco" class="novel">Aceitar o casaco</button>
+                <button id="recusarCasaco" class="novel">Recusar o casaco</button>
+            </div>
+        </section>
+
+        <section id="ataqueAssassinos" class="caixa-dialogo" style="display:none;">
+            <p>De repente, uma flecha voa em direção a Callisto! Você grita, achando que ele será morto...</p>
+            <p>Mas a flecha é desviada magicamente pelo amuleto que você lhe deu!</p>
+            <p><strong class="nomecallisto">Callisto:</strong> <em>"SUBA NO CAVALO, AGORA!"</em></p>
+            <p class="nome-sistema">SISTEMA: EPISÓDIO PRINCIPAL! SEJA A RAINHA DO TORNEIO DE CAÇA. SEGUNDA MISSÃO! {PROTEJA O PRÍNCIPE HERDEIRO DOS ASSASSINOS!] OS 20 ASSASSINOS DEVEM SER DERRUBADOS. (RECOMPENSA: PONTOS DE AFETO COM KALLISTO +10%. REPUTAÇÃO +50. FICHA DE ASSASSINO)</p>
+            <p class="nome-sistema">A MISSÃO SERÁ INICIADA AUTOMATICAMENTE EM 5 SEGUNDOS!</p>
+        </section>
+
+        <section id="minijogoAssassinos" class="caixa-dialogo" style="display:none;">
+            <h3>Proteja o Príncipe Herdeiro!</h3>
+            <p>Use sua besta para eliminar os 20 assassinos!</p>
+            <div class="status-jogo">
+                <p>Assassinos eliminados: <span id="assassinosEliminados">0</span>/20</p>
+                <p>Tempo: <span id="tempoAssassinos">60</span>s</p>
+            </div>
+            <div class="jogo-area" id="areaAssassinos">
+                </div>
+            <div class="instrucoes">
+                <p>Clique nos assassinos para eliminá-los com sua besta!</p>
+            </div>
+        </section>
+
+        <section id="quedaPenhasco" class="caixa-dialogo" style="display:none;">
+            <p>Vocês chegam à beira de um penhasco enquanto fogem dos assassinos.</p>
+            <p><strong class="nomecallisto">Callisto:</strong> <em>"É PERIGOSO, ENTÃO FIQUE ATRÁS DE MIM."</em></p>
+            <p><strong class="nomepenelope">Penelope:</strong> <em>"ESTÁ BEM, POSSO CUIDAR DE MIM MESMA. ENTÃO, POR FAVOR, SE CONCENTRE EM CUIDAR DE SI MESMO, VOSSA ALTEZA."</em></p>
+            <p>Os últimos três assassinos atacam - dois vão para Callisto, mas um vem em sua direção!</p>
+            <p><strong class="nomeassassino">Assassino:</strong> <em>"MORRA, VADIA!"</em></p>
+            <div class="opcoes-dialogo">
+                <button id="defenderCallisto" class="novel">Tentar proteger Callisto</button>
+                <button id="atirarAssassino" class="novel">Atirar no assassino</button>
+                <button id="esquivarAtaque" class="novel">Esquivar-se do ataque</button>
+            </div>
+        </section>
+
+        <section id="quedaRio" class="caixa-dialogo" style="display:none;">
+            <p>Callisto é atingido, mas vocês conseguem eliminar os últimos assassinos.</p>
+            <p class="nome-sistema">SISTEMA: MISSÃO COMPLETA! RECOMPENSA ADQUIRIDA: PONTOS DE AFETO COM KALLISTO +10%, REPUTAÇÃO +50 (TOTAL: 130)</p>
+            <p>Mas no processo, vocês caem do penhasco e mergulham no rio abaixo.</p>
+            <div class="opcoes-dialogo">
+                <button id="continuarQueda" class="novel">Continuar</button>
+            </div>
+        </section>
+
+        <section id="cenaCaverna" class="caixa-dialogo" style="display:none;">
+            <p>Callisto leva você para uma caverna para passar a noite e secar suas roupas.</p>
+            <p>Enquanto explora a caverna, você encontra algo intrigante...</p>
+            <div class="opcoes-dialogo">
+                <button id="explorarCaverna" class="novel">Explorar a caverna</button>
+                <button id="descansarCaverna" class="novel">Descansar e secar as roupas</button>
+            </div>
+        </section>
+
+        <section id="esqueletoPergaminho" class="caixa-dialogo" style="display:none;">
+            <p>No fundo da caverna, você encontra um esqueleto segurando um pergaminho antigo.</p>
+            <p>O pergaminho parece conter magia antiga e poderosa.</p>
+            <div class="opcoes-dialogo">
+                <button id="lerPergaminho" class="novel">Ler o pergaminho</button>
+                <button id="deixarPergaminho" class="novel">Deixar o pergaminho onde está</button>
+                <button id="mostrarCallisto" class="novel">Mostrar a Callisto</button>
+            </div>
+        </section>
+
+        <section id="revelacaoPergaminho" class="caixa-dialogo" style="display:none;">
+            <p>O pergaminho contém feitiços de proteção antigos, mas também uma advertência sombria.</p>
+            <p>Parece estar relacionado à magia de transmigração e aos segredos do mundo em que você está.</p>
+            <div class="opcoes-dialogo">
+                <button id="guardarPergaminho" class="novel">Guardar o pergaminho</button>
+                <button id="queimarPergaminho" class="novel">Queimar o pergaminho</button>
+            </div>
+        </section>
+
+        <section id="finalCapitulo71" class="caixa-dialogo" style="display:none;">
+            <h2>Fim do Capítulo 71</h2>
+            <p>Você e Callisto passam a noite na caverna, com o pergaminho misterioso agora em sua posse.</p>
+            <p>O que o futuro reserva para essa dupla improvável?</p>
+            <div class="opcoes-dialogo">
+                <button id="proximoCapitulo72" class="novel">Continuar para o próximo capítulo</button>
+                <button id="voltarInicio" class="novel">Voltar ao início</button>
+            </div>
+        </section>
+
+        <section id="gameOver" class="caixa-dialogo" style="display:none;">
+            <h2>GAME OVER</h2>
+            <p>Você tentou fugir da missão, mas acabou se machucando fatalmente.</p>
+            <button id="reiniciar" class="novel">Reiniciar</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Meu destino é morrer, mas eu me recuso a aceitá-lo. </p>
+    </footer>
+
+    <script src="callisto3.js"></script>
+    <script src="callref.js"></script>
 </body>
 </html>
