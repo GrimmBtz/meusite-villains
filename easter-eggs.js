@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 "O Clube do Coelho Branco está sempre observando.",
                 "Vinter: 'Você me lembra alguém... mas não posso ver através da sua máscara.'",
                 "A magia corre em seu sangue, assim como no meu.",
-                "Coelho: 'Penelope Eckhart. A Guilda do Coelho Branco aguarda sua presença.'"
+                "Coelho: 'Penelope Eckhart. A Guilda do Coelho Branco aguarda sua presença.'",
+                "Assim como vinter fez penelope sorrir nos piores momentos com magica, espero te fazer sorrir neste momento que vc está passando'"
             ];
             
             showSecretMessage(messages[Math.floor(Math.random() * messages.length)]);
@@ -43,7 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 "Sobrevivente de um mundo que quer sua morte.",
                 "Ela que deveria ser a vilã, tornou-se a heroína de sua própria história.",
                 "Cada escolha muda o destino. Cada passo altera o final.",
-                "A adaga que deveria matá-la tornou-se sua arma de sobrevivência."
+                "A adaga que deveria matá-la tornou-se sua arma de sobrevivência.",
+                "Ana Gabi, saiba que eu te amo viu, espero que goste"
             ];
             
             showSecretMessage(messages[Math.floor(Math.random() * messages.length)]);
